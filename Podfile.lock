@@ -1,0 +1,17 @@
+PODS:
+  - FBSnapshotTestCase (2.0.7):
+    - FBSnapshotTestCase/SwiftSupport (= 2.0.7)
+  - FBSnapshotTestCase/Core (2.0.7)
+  - FBSnapshotTestCase/SwiftSupport (2.0.7):
+    - FBSnapshotTestCase/Core
+  - Nimble (3.0.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - Nimble (= 3.0.0)
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 7e85180d0d141a0cf472352edda7e80d7eaeb547
+  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+
+COCOAPODS: 0.39.0
