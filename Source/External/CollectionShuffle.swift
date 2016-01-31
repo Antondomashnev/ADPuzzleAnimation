@@ -8,15 +8,6 @@
 
 import UIKit
 
-extension CollectionType {
-    /// Return a copy of `self` with its elements shuffled
-    func shuffle() -> [Generator.Element] {
-        var list = Array(self)
-        list.shuffleInPlace()
-        return list
-    }
-}
-
 extension MutableCollectionType where Index == Int {
     /// Shuffle the elements of `self` in-place.
     mutating func shuffleInPlace() {

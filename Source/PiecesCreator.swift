@@ -9,22 +9,22 @@
 import UIKit
 
 class PiecesCreator {
-    static func createPiecesFromView(view: UIView, pieceSide: CGFloat) -> [Piece] {
+    static func createPiecesFromView(view: UIView, pieceSideSize: CGFloat) -> [Piece] {
         var pieces: [Piece] = []
         let size = view.frame.size
         
         let fromViewSnapshot = view.snapshotViewAfterScreenUpdates(false)
         
-        let width = pieceSide
-        let height = pieceSide
+        let width = pieceSideSize
+        let height = pieceSideSize
         
         for x in CGFloat(0).stride(through: size.width, by: width) {
             for y in CGFloat(0).stride(through: size.height, by: height) {
-                let pieceRegion = CGRect(x: x, y: y , width: width, height: height)
+                let pieceRegion = CGRect(x: x, y: y , width: min(width, size.width - x), height: min(height, size.height - y))
                 let pieceView = fromViewSnapshot.resizableSnapshotViewFromRect(pieceRegion, afterScreenUpdates: false, withCapInsets: UIEdgeInsetsZero)
                 pieceView.frame = pieceRegion
                 let piece = Piece(pieceView: pieceView)
-                piece.desiredPosition = pieceRegion.origin
+                piece.corner = PiecePositioner.cornerForPosition(piece.originalPosition, inRect: view.bounds)
                 pieces.append(piece)
             }
         }

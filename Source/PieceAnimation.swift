@@ -12,32 +12,66 @@ extension CAAnimation {
     
     //MARK: - Interface
     
-    static func forwardPieceAnimation(piece: Piece, velocity: CGFloat, delay: CFTimeInterval) -> CAAnimation {
+    static func basicForwardPieceAnimation(piece: Piece, velocity: Double, delay: CFTimeInterval) -> CAAnimation {
         func setDefaultValuesForAnimation(animation: CAAnimation) {
             animation.fillMode = kCAFillModeForwards
             animation.removedOnCompletion = false
             animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         }
         
-        let moveAnimation: CASpringAnimation = CASpringAnimation(keyPath: "position")
+        func setAnimationDurationBasedOnVelocity(animation: CAAnimation, velocity: Double) {
+            animation.duration = velocity / 10.0
+        }
+        
+        let moveAnimation: CABasicAnimation = CABasicAnimation(keyPath: "position")
         setDefaultValuesForAnimation(moveAnimation)
+        setAnimationDurationBasedOnVelocity(moveAnimation, velocity: velocity)
         moveAnimation.fromValue = NSValue(CGPoint: piece.initialPosition)
         moveAnimation.toValue = NSValue(CGPoint: piece.desiredPosition)
-        moveAnimation.damping = 1000
-        moveAnimation.stiffness = 20
-        moveAnimation.mass = 10
-        moveAnimation.initialVelocity = velocity
-        moveAnimation.duration = moveAnimation.settlingDuration
+        moveAnimation.timingFunction = CAMediaTimingFunction(controlPoints: 0.0, 0.84, 0.49, 1.00)
         
         let scaleAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.scale")
         setDefaultValuesForAnimation(scaleAnimation)
-        scaleAnimation.duration = moveAnimation.duration
-        scaleAnimation.fromValue = 5
+        setAnimationDurationBasedOnVelocity(scaleAnimation, velocity: velocity)
+        scaleAnimation.fromValue = 2.5
         scaleAnimation.toValue = 1
         
         let forwardAnimation = CAAnimationGroup()
         setDefaultValuesForAnimation(forwardAnimation)
-        forwardAnimation.duration = moveAnimation.duration
+        setAnimationDurationBasedOnVelocity(forwardAnimation, velocity: velocity)
+        forwardAnimation.animations = [moveAnimation, scaleAnimation]
+        forwardAnimation.beginTime = CACurrentMediaTime() + delay
+        
+        return forwardAnimation
+    }
+    
+    static func basicBackwardPieceAnimation(piece: Piece, velocity: Double, delay: CFTimeInterval) -> CAAnimation {
+        func setDefaultValuesForAnimation(animation: CAAnimation) {
+            animation.fillMode = kCAFillModeForwards
+            animation.removedOnCompletion = false
+            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        }
+        
+        func setAnimationDurationBasedOnVelocity(animation: CAAnimation, velocity: Double) {
+            animation.duration = 10.0 / velocity
+        }
+        
+        let moveAnimation: CABasicAnimation = CABasicAnimation(keyPath: "position")
+        setDefaultValuesForAnimation(moveAnimation)
+        setAnimationDurationBasedOnVelocity(moveAnimation, velocity: velocity)
+        moveAnimation.fromValue = NSValue(CGPoint: piece.initialPosition)
+        moveAnimation.toValue = NSValue(CGPoint: piece.desiredPosition)
+        moveAnimation.timingFunction = CAMediaTimingFunction(controlPoints: 1.0, 0.0, 1.0, 0.67)
+        
+        let scaleAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.scale")
+        setDefaultValuesForAnimation(scaleAnimation)
+        setAnimationDurationBasedOnVelocity(scaleAnimation, velocity: velocity)
+        scaleAnimation.fromValue = 1
+        scaleAnimation.toValue = 2.5
+        
+        let forwardAnimation = CAAnimationGroup()
+        setDefaultValuesForAnimation(forwardAnimation)
+        setAnimationDurationBasedOnVelocity(forwardAnimation, velocity: velocity)
         forwardAnimation.animations = [moveAnimation, scaleAnimation]
         forwardAnimation.beginTime = CACurrentMediaTime() + delay
         
