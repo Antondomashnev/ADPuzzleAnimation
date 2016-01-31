@@ -15,6 +15,7 @@ class PiecePositionerTests: XCTestCase {
 
     let pieceContainerView = UIView(frame: CGRect(x: 60, y: 130, width: 200, height: 200))
     let keyWindow = UIApplication.sharedApplication().keyWindow
+    let screenBounds = UIScreen.mainScreen().bounds
     
     override func setUp() {
         super.setUp()
@@ -30,15 +31,15 @@ class PiecePositionerTests: XCTestCase {
         let pieceView = UIView(frame: CGRect(x: 20, y: 20, width: 20, height: 20))
         let piece = Piece(pieceView: pieceView)
         for _ in 1...100 {
-            let initialPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: 20, fromView: pieceContainerView)
-            if(initialPosition.x < 0){
-                
+            let initialPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: 20, fromView: pieceContainerView, pieceScale: 2.5)
+            if(initialPosition.x < -CGRectGetMinX(pieceContainerView.frame)){
+                expect(initialPosition.x) < -CGRectGetMinX(pieceContainerView.frame)
+                expect(initialPosition.y) < CGRectGetMidY(pieceContainerView.bounds)
             }
             else {
-                
+                expect(initialPosition.x) < CGRectGetMidX(pieceContainerView.bounds)
+                expect(initialPosition.y) < -CGRectGetMinY(pieceContainerView.frame)
             }
-            expect(initialPosition.x) < CGRectGetWidth(UIScreen.mainScreen().bounds)
-            expect(initialPosition.y) < CGRectGetHeight(UIScreen.mainScreen().bounds)
         }
     }
     
@@ -46,9 +47,15 @@ class PiecePositionerTests: XCTestCase {
         let pieceView = UIView(frame: CGRect(x: 120, y: 20, width: 20, height: 20))
         let piece = Piece(pieceView: pieceView)
         for _ in 1...100 {
-            let initialPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: 20, fromView: pieceContainerView)
-            expect(initialPosition.x) > CGRectGetWidth(UIScreen.mainScreen().bounds)
-            expect(initialPosition.y) < 0
+            let initialPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: 20, fromView: pieceContainerView, pieceScale: 2.5)
+            if(initialPosition.x > CGRectGetWidth(screenBounds) - CGRectGetMinX(pieceContainerView.frame)){
+                expect(initialPosition.x) > CGRectGetWidth(screenBounds) - CGRectGetMinX(pieceContainerView.frame)
+                expect(initialPosition.y) < CGRectGetMidY(pieceContainerView.bounds)
+            }
+            else {
+                expect(initialPosition.x) > CGRectGetMidX(pieceContainerView.bounds)
+                expect(initialPosition.y) < -CGRectGetMinY(pieceContainerView.frame)
+            }
         }
     }
     
@@ -56,9 +63,15 @@ class PiecePositionerTests: XCTestCase {
         let pieceView = UIView(frame: CGRect(x: 20, y: 120, width: 20, height: 20))
         let piece = Piece(pieceView: pieceView)
         for _ in 1...100 {
-            let initialPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: 20, fromView: pieceContainerView)
-            expect(initialPosition.x) < 0
-            expect(initialPosition.y) > CGRectGetHeight(UIScreen.mainScreen().bounds)
+            let initialPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: 20, fromView: pieceContainerView, pieceScale: 2.5)
+            if(initialPosition.x < -CGRectGetMinX(pieceContainerView.frame)){
+                expect(initialPosition.x) < -CGRectGetMinX(pieceContainerView.frame)
+                expect(initialPosition.y) > CGRectGetMidY(pieceContainerView.bounds)
+            }
+            else {
+                expect(initialPosition.x) < CGRectGetMidX(pieceContainerView.bounds)
+                expect(initialPosition.y) > CGRectGetHeight(screenBounds) - CGRectGetMinY(pieceContainerView.frame)
+            }
         }
     }
     
@@ -66,9 +79,15 @@ class PiecePositionerTests: XCTestCase {
         let pieceView = UIView(frame: CGRect(x: 120, y: 120, width: 20, height: 20))
         let piece = Piece(pieceView: pieceView)
         for _ in 1...100 {
-            let initialPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: 20, fromView: pieceContainerView)
-            expect(initialPosition.x) > CGRectGetWidth(UIScreen.mainScreen().bounds)
-            expect(initialPosition.y) > CGRectGetHeight(UIScreen.mainScreen().bounds)
+            let initialPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: 20, fromView: pieceContainerView, pieceScale: 2.5)
+            if(initialPosition.x > CGRectGetWidth(screenBounds) - CGRectGetMinX(pieceContainerView.frame)){
+                expect(initialPosition.x) > CGRectGetWidth(screenBounds) - CGRectGetMinX(pieceContainerView.frame)
+                expect(initialPosition.y) > CGRectGetMidY(pieceContainerView.bounds)
+            }
+            else {
+                expect(initialPosition.x) > CGRectGetMidX(pieceContainerView.bounds)
+                expect(initialPosition.y) > CGRectGetHeight(screenBounds) - CGRectGetMinY(pieceContainerView.frame)
+            }
         }
     }
     

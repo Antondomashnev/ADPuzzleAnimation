@@ -26,6 +26,7 @@
 		6D3BBC271C42E8D3004F2C45 /* PiecePositionerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3BBC261C42E8D3004F2C45 /* PiecePositionerTests.swift */; };
 		6D4E487E1C4BF007001DF81E /* PiecesCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4E487D1C4BF007001DF81E /* PiecesCreatorTests.swift */; };
 		6D6BB73D1C54DDCC000BC71B /* PieceAnimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB73C1C54DDCC000BC71B /* PieceAnimatorTests.swift */; };
+		6DF0170A1C5E8A9C00FB5875 /* ArrayRemoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF017091C5E8A9C00FB5875 /* ArrayRemoveObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		6D4E487D1C4BF007001DF81E /* PiecesCreatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecesCreatorTests.swift; sourceTree = "<group>"; };
 		6D6BB73C1C54DDCC000BC71B /* PieceAnimatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceAnimatorTests.swift; sourceTree = "<group>"; };
 		6DB806D3D47036B0B3ABA217 /* Pods_PuzzleAnimationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PuzzleAnimationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DF017091C5E8A9C00FB5875 /* ArrayRemoveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayRemoveObject.swift; sourceTree = "<group>"; };
 		9C2749287A8EEE42D1B5CA24 /* libPods-PuzzleAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PuzzleAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A402DB2E2A2C5482571F27 /* Pods-PuzzleAnimationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuzzleAnimationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PuzzleAnimationTests/Pods-PuzzleAnimationTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +150,7 @@
 			children = (
 				6D3BBC0A1C42BF10004F2C45 /* CollectionShuffle.swift */,
 				6D3BBC0B1C42BF10004F2C45 /* Random.swift */,
+				6DF017091C5E8A9C00FB5875 /* ArrayRemoveObject.swift */,
 			);
 			path = External;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				6D3BBC011C41C2CE004F2C45 /* Piece.swift in Sources */,
 				6D3BBC0D1C42BF10004F2C45 /* Random.swift in Sources */,
 				6D3BBC0C1C42BF10004F2C45 /* CollectionShuffle.swift in Sources */,
+				6DF0170A1C5E8A9C00FB5875 /* ArrayRemoveObject.swift in Sources */,
 				6D3BBC051C41C2CE004F2C45 /* PuzzleAnimation.swift in Sources */,
 				6D3BBC081C42BD52004F2C45 /* PieceAnimator.swift in Sources */,
 				6D3BBBF71C41C2C8004F2C45 /* ViewController.swift in Sources */,

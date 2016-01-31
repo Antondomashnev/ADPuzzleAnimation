@@ -21,7 +21,7 @@ class PieceAnimationTests: XCTestCase {
         piece = Piece(pieceView: UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100)))
         piece.initialPosition = CGPointZero
         piece.desiredPosition = CGPoint(x: 100, y: 100)
-        forwardAnimation = CAAnimation.basicForwardPieceAnimation(piece, velocity: 10, delay: 10) as! CAAnimationGroup
+        forwardAnimation = CAAnimation.basicForwardPieceAnimation(piece, velocity: 10, delay: 10, scale: 2.5) as! CAAnimationGroup
     }
     
     func testThatItConsistsOfTwoAnimations() {

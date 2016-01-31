@@ -34,6 +34,7 @@ class Piece: NSObject {
             let anchorDelta: CGPoint = view.layer.anchorPoint
             view.layer.anchorPoint = CGPointZero
             view.frame.origin = CGPoint(x: view.frame.origin.x - view.frame.width * anchorDelta.x, y: view.frame.origin.y - view.frame.height * anchorDelta.y)
+            view.layer.position = view.frame.origin
         }
         
         originalPosition = pieceView.frame.origin

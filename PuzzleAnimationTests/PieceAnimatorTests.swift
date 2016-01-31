@@ -39,10 +39,10 @@ class PieceAnimatorTests: XCTestCase {
         piece3.initialPosition = CGPoint(x: 0, y: 0)
         piece3.desiredPosition = CGPoint(x: 0, y: 0)
         
-        self.pieceAnimator.addForwardAnimationForPieces([piece1, piece2, piece3], withVelocity: 10)
+        self.pieceAnimator.addForwardAnimationForPieces([piece1, piece2, piece3], withVelocity: 10, withScale: 2.5)
         
         for piece in [piece1, piece2, piece3] {
-            expect(piece.view.layer.animationForKey("com.antondomashnev.PuzzleAnimation.basicbasicForwardPieceAnimationKey")).toNot(beNil())
+            expect(piece.view.layer.animationForKey("com.antondomashnev.PuzzleAnimation.basicForwardPieceAnimationKey")).toNot(beNil())
         }
     }
     
@@ -57,14 +57,14 @@ class PieceAnimatorTests: XCTestCase {
         let animation2 = CAAnimation()
         let animation3 = CAAnimation()
         
-        view1.layer.addAnimation(animation1, forKey: "com.antondomashnev.PuzzleAnimation.basicbasicForwardPieceAnimationKey")
-        view2.layer.addAnimation(animation2, forKey: "com.antondomashnev.PuzzleAnimation.basicbasicForwardPieceAnimationKey")
-        view3.layer.addAnimation(animation3, forKey: "com.antondomashnev.PuzzleAnimation.basicbasicForwardPieceAnimationKey")
+        view1.layer.addAnimation(animation1, forKey: "com.antondomashnev.PuzzleAnimation.basicForwardPieceAnimationKey")
+        view2.layer.addAnimation(animation2, forKey: "com.antondomashnev.PuzzleAnimation.basicForwardPieceAnimationKey")
+        view3.layer.addAnimation(animation3, forKey: "com.antondomashnev.PuzzleAnimation.basicForwardPieceAnimationKey")
         
         self.pieceAnimator.removeForwardAnimationFromPieces([piece1, piece2, piece3])
         
         for piece in [piece1, piece2, piece3] {
-            expect(piece.view.layer.animationForKey("com.antondomashnev.PuzzleAnimation.basicbasicForwardPieceAnimationKey")).to(beNil())
+            expect(piece.view.layer.animationForKey("com.antondomashnev.PuzzleAnimation.basicForwardPieceAnimationKey")).to(beNil())
         }
     }
 }
