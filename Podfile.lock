@@ -5,13 +5,16 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.0.7):
     - FBSnapshotTestCase/Core
   - Nimble (3.0.0)
+  - OCMock (3.2.2)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
   - Nimble (= 3.0.0)
+  - OCMock
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 7e85180d0d141a0cf472352edda7e80d7eaeb547
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  OCMock: 18c9b7e67d4c2770e95bb77a9cc1ae0c91fe3835
 
 COCOAPODS: 0.39.0

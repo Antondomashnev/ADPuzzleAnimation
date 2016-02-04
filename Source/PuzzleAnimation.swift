@@ -10,7 +10,7 @@ import UIKit
 
 public typealias PuzzleAnimationCompletion = (animation: PuzzleAnimation, finished: Bool) -> Void
 
-public class PuzzleAnimation: NSObject {
+public class PuzzleAnimation {
     
     public var animationCompletion: PuzzleAnimationCompletion?
     public var animationVelocity: Double = 10
@@ -21,15 +21,12 @@ public class PuzzleAnimation: NSObject {
     private let pieces: [Piece]
     private let pieceSide: CGFloat
     private let viewToAnimate: UIView
-    private let animationContainerWindow: UIWindow
     private var piecesContainerView: UIView?
     
-    init(viewToAnimate: UIView, inWindow animationContainerWindow: UIWindow, pieceSide: CGFloat) {
+    init(viewToAnimate: UIView, pieceSide: CGFloat) {
         self.pieceSide = pieceSide
-        self.animationContainerWindow = animationContainerWindow
         self.pieces = PiecesCreator.createPiecesFromView(viewToAnimate, pieceSideSize: pieceSide)
         self.viewToAnimate = viewToAnimate
-        super.init()
     }
     
     //MARK: - Interface
