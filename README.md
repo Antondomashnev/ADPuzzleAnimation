@@ -5,4 +5,4 @@
 
 Custom animation for UIView inspired by Fabric - Answers animation.
 
-<img src="http://gph.is/1VYZv4d" width="320" /> <img src="http://i.imgur.com/ofGGbQs.gif" width="320" />
+<img src="http://i.giphy.com/u1rehLIHD822I.gif" width="320" /> <img src="http://i.imgur.com/ofGGbQs.gif" width="320" />
