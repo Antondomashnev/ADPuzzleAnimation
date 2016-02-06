@@ -124,9 +124,7 @@ class PieceAnimatorTests: XCTestCase {
         let animation2 = CAAnimation()
         let animation3 = CAAnimation()
         
-        forwardPieceAnimator.animationDidStart(animation1)
-        forwardPieceAnimator.animationDidStart(animation2)
-        forwardPieceAnimator.animationDidStart(animation3)
+        forwardPieceAnimator.runningAnimationsCount = 3
         
         forwardPieceAnimator.animationDidStop(animation2, finished: true)
         forwardPieceAnimator.animationDidStop(animation3, finished: true)
@@ -146,9 +144,7 @@ class PieceAnimatorTests: XCTestCase {
         let animation2 = CAAnimation()
         let animation3 = CAAnimation()
         
-        forwardPieceAnimator.animationDidStart(animation1)
-        forwardPieceAnimator.animationDidStart(animation2)
-        forwardPieceAnimator.animationDidStart(animation3)
+        forwardPieceAnimator.runningAnimationsCount = 3
         
         forwardPieceAnimator.animationDidStop(animation2, finished: true)
         forwardPieceAnimator.animationDidStop(animation3, finished: false)

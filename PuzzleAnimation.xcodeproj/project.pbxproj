@@ -13,21 +13,21 @@
 		6D3BBBEC1C41C2BA004F2C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D3BBBEB1C41C2BA004F2C45 /* Assets.xcassets */; };
 		6D3BBBEF1C41C2BA004F2C45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D3BBBED1C41C2BA004F2C45 /* LaunchScreen.storyboard */; };
 		6D3BBBF71C41C2C8004F2C45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3BBBF61C41C2C8004F2C45 /* ViewController.swift */; };
-		6D3BBC011C41C2CE004F2C45 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3BBBFA1C41C2CE004F2C45 /* Piece.swift */; };
-		6D3BBC021C41C2CE004F2C45 /* PieceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3BBBFB1C41C2CE004F2C45 /* PieceAnimation.swift */; };
-		6D3BBC031C41C2CE004F2C45 /* PiecePositioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3BBBFC1C41C2CE004F2C45 /* PiecePositioner.swift */; };
-		6D3BBC041C41C2CE004F2C45 /* PiecesCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3BBBFD1C41C2CE004F2C45 /* PiecesCreator.swift */; };
-		6D3BBC051C41C2CE004F2C45 /* PuzzleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3BBBFE1C41C2CE004F2C45 /* PuzzleAnimation.swift */; };
-		6D3BBC081C42BD52004F2C45 /* PieceAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3BBC071C42BD52004F2C45 /* PieceAnimator.swift */; };
-		6D3BBC0C1C42BF10004F2C45 /* CollectionShuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3BBC0A1C42BF10004F2C45 /* CollectionShuffle.swift */; };
-		6D3BBC0D1C42BF10004F2C45 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3BBC0B1C42BF10004F2C45 /* Random.swift */; };
 		6D3BBC231C42E6ED004F2C45 /* PieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3BBC221C42E6ED004F2C45 /* PieceTests.swift */; };
 		6D3BBC251C42E79B004F2C45 /* PieceAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3BBC241C42E79B004F2C45 /* PieceAnimationTests.swift */; };
 		6D3BBC271C42E8D3004F2C45 /* PiecePositionerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3BBC261C42E8D3004F2C45 /* PiecePositionerTests.swift */; };
 		6D4B683C1C640B82000E1101 /* PuzzleAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B683B1C640B82000E1101 /* PuzzleAnimationTests.swift */; };
+		6D4B68731C661CE4000E1101 /* ArrayRemoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B686A1C661CE4000E1101 /* ArrayRemoveObject.swift */; };
+		6D4B68741C661CE4000E1101 /* CollectionShuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B686B1C661CE4000E1101 /* CollectionShuffle.swift */; };
+		6D4B68751C661CE4000E1101 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B686C1C661CE4000E1101 /* Random.swift */; };
+		6D4B68761C661CE4000E1101 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B686D1C661CE4000E1101 /* Piece.swift */; };
+		6D4B68771C661CE4000E1101 /* PieceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B686E1C661CE4000E1101 /* PieceAnimation.swift */; };
+		6D4B68781C661CE4000E1101 /* PieceAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B686F1C661CE4000E1101 /* PieceAnimator.swift */; };
+		6D4B68791C661CE4000E1101 /* PiecePositioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B68701C661CE4000E1101 /* PiecePositioner.swift */; };
+		6D4B687A1C661CE4000E1101 /* PiecesCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B68711C661CE4000E1101 /* PiecesCreator.swift */; };
+		6D4B687C1C661D06000E1101 /* PuzzleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B687B1C661D06000E1101 /* PuzzleAnimation.swift */; };
 		6D4E487E1C4BF007001DF81E /* PiecesCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4E487D1C4BF007001DF81E /* PiecesCreatorTests.swift */; };
 		6D6BB73D1C54DDCC000BC71B /* PieceAnimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB73C1C54DDCC000BC71B /* PieceAnimatorTests.swift */; };
-		6DF0170A1C5E8A9C00FB5875 /* ArrayRemoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF017091C5E8A9C00FB5875 /* ArrayRemoveObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,24 +49,24 @@
 		6D3BBBEE1C41C2BA004F2C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D3BBBF01C41C2BA004F2C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D3BBBF61C41C2C8004F2C45 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6D3BBBFA1C41C2CE004F2C45 /* Piece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
-		6D3BBBFB1C41C2CE004F2C45 /* PieceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceAnimation.swift; sourceTree = "<group>"; };
-		6D3BBBFC1C41C2CE004F2C45 /* PiecePositioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecePositioner.swift; sourceTree = "<group>"; };
-		6D3BBBFD1C41C2CE004F2C45 /* PiecesCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecesCreator.swift; sourceTree = "<group>"; };
-		6D3BBBFE1C41C2CE004F2C45 /* PuzzleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleAnimation.swift; sourceTree = "<group>"; };
-		6D3BBC071C42BD52004F2C45 /* PieceAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceAnimator.swift; sourceTree = "<group>"; };
-		6D3BBC0A1C42BF10004F2C45 /* CollectionShuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionShuffle.swift; sourceTree = "<group>"; };
-		6D3BBC0B1C42BF10004F2C45 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		6D3BBC121C42C263004F2C45 /* PuzzleAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuzzleAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D3BBC161C42C263004F2C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D3BBC221C42E6ED004F2C45 /* PieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceTests.swift; sourceTree = "<group>"; };
 		6D3BBC241C42E79B004F2C45 /* PieceAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceAnimationTests.swift; sourceTree = "<group>"; };
 		6D3BBC261C42E8D3004F2C45 /* PiecePositionerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecePositionerTests.swift; sourceTree = "<group>"; };
 		6D4B683B1C640B82000E1101 /* PuzzleAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleAnimationTests.swift; sourceTree = "<group>"; };
+		6D4B686A1C661CE4000E1101 /* ArrayRemoveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayRemoveObject.swift; sourceTree = "<group>"; };
+		6D4B686B1C661CE4000E1101 /* CollectionShuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionShuffle.swift; sourceTree = "<group>"; };
+		6D4B686C1C661CE4000E1101 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		6D4B686D1C661CE4000E1101 /* Piece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
+		6D4B686E1C661CE4000E1101 /* PieceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceAnimation.swift; sourceTree = "<group>"; };
+		6D4B686F1C661CE4000E1101 /* PieceAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceAnimator.swift; sourceTree = "<group>"; };
+		6D4B68701C661CE4000E1101 /* PiecePositioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecePositioner.swift; sourceTree = "<group>"; };
+		6D4B68711C661CE4000E1101 /* PiecesCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecesCreator.swift; sourceTree = "<group>"; };
+		6D4B687B1C661D06000E1101 /* PuzzleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleAnimation.swift; sourceTree = "<group>"; };
 		6D4E487D1C4BF007001DF81E /* PiecesCreatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecesCreatorTests.swift; sourceTree = "<group>"; };
 		6D6BB73C1C54DDCC000BC71B /* PieceAnimatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceAnimatorTests.swift; sourceTree = "<group>"; };
 		6DB806D3D47036B0B3ABA217 /* Pods_PuzzleAnimationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PuzzleAnimationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DF017091C5E8A9C00FB5875 /* ArrayRemoveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayRemoveObject.swift; sourceTree = "<group>"; };
 		9C2749287A8EEE42D1B5CA24 /* libPods-PuzzleAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PuzzleAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A402DB2E2A2C5482571F27 /* Pods-PuzzleAnimationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuzzleAnimationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PuzzleAnimationTests/Pods-PuzzleAnimationTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,25 +136,10 @@
 		6D3BBBF81C41C2CE004F2C45 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				6D3BBC091C42BF01004F2C45 /* External */,
-				6D3BBBFA1C41C2CE004F2C45 /* Piece.swift */,
-				6D3BBBFB1C41C2CE004F2C45 /* PieceAnimation.swift */,
-				6D3BBBFC1C41C2CE004F2C45 /* PiecePositioner.swift */,
-				6D3BBBFD1C41C2CE004F2C45 /* PiecesCreator.swift */,
-				6D3BBC071C42BD52004F2C45 /* PieceAnimator.swift */,
-				6D3BBBFE1C41C2CE004F2C45 /* PuzzleAnimation.swift */,
+				6D4B68681C661CE4000E1101 /* Private */,
+				6D4B68721C661CE4000E1101 /* Public */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		6D3BBC091C42BF01004F2C45 /* External */ = {
-			isa = PBXGroup;
-			children = (
-				6D3BBC0A1C42BF10004F2C45 /* CollectionShuffle.swift */,
-				6D3BBC0B1C42BF10004F2C45 /* Random.swift */,
-				6DF017091C5E8A9C00FB5875 /* ArrayRemoveObject.swift */,
-			);
-			path = External;
 			sourceTree = "<group>";
 		};
 		6D3BBC131C42C263004F2C45 /* PuzzleAnimationTests */ = {
@@ -169,6 +154,37 @@
 				6D4B683B1C640B82000E1101 /* PuzzleAnimationTests.swift */,
 			);
 			path = PuzzleAnimationTests;
+			sourceTree = "<group>";
+		};
+		6D4B68681C661CE4000E1101 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				6D4B68691C661CE4000E1101 /* External */,
+				6D4B686D1C661CE4000E1101 /* Piece.swift */,
+				6D4B686E1C661CE4000E1101 /* PieceAnimation.swift */,
+				6D4B686F1C661CE4000E1101 /* PieceAnimator.swift */,
+				6D4B68701C661CE4000E1101 /* PiecePositioner.swift */,
+				6D4B68711C661CE4000E1101 /* PiecesCreator.swift */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		6D4B68691C661CE4000E1101 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				6D4B686A1C661CE4000E1101 /* ArrayRemoveObject.swift */,
+				6D4B686B1C661CE4000E1101 /* CollectionShuffle.swift */,
+				6D4B686C1C661CE4000E1101 /* Random.swift */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		6D4B68721C661CE4000E1101 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				6D4B687B1C661D06000E1101 /* PuzzleAnimation.swift */,
+			);
+			path = Public;
 			sourceTree = "<group>";
 		};
 		EBBAAE6D3F34906B7F35D6C4 /* Frameworks */ = {
@@ -332,17 +348,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D3BBC041C41C2CE004F2C45 /* PiecesCreator.swift in Sources */,
-				6D3BBC011C41C2CE004F2C45 /* Piece.swift in Sources */,
-				6D3BBC0D1C42BF10004F2C45 /* Random.swift in Sources */,
-				6D3BBC0C1C42BF10004F2C45 /* CollectionShuffle.swift in Sources */,
-				6DF0170A1C5E8A9C00FB5875 /* ArrayRemoveObject.swift in Sources */,
-				6D3BBC051C41C2CE004F2C45 /* PuzzleAnimation.swift in Sources */,
-				6D3BBC081C42BD52004F2C45 /* PieceAnimator.swift in Sources */,
+				6D4B68731C661CE4000E1101 /* ArrayRemoveObject.swift in Sources */,
 				6D3BBBF71C41C2C8004F2C45 /* ViewController.swift in Sources */,
-				6D3BBC031C41C2CE004F2C45 /* PiecePositioner.swift in Sources */,
-				6D3BBC021C41C2CE004F2C45 /* PieceAnimation.swift in Sources */,
+				6D4B68791C661CE4000E1101 /* PiecePositioner.swift in Sources */,
+				6D4B687A1C661CE4000E1101 /* PiecesCreator.swift in Sources */,
+				6D4B68761C661CE4000E1101 /* Piece.swift in Sources */,
+				6D4B68751C661CE4000E1101 /* Random.swift in Sources */,
 				6D3BBBE51C41C2BA004F2C45 /* AppDelegate.swift in Sources */,
+				6D4B687C1C661D06000E1101 /* PuzzleAnimation.swift in Sources */,
+				6D4B68741C661CE4000E1101 /* CollectionShuffle.swift in Sources */,
+				6D4B68771C661CE4000E1101 /* PieceAnimation.swift in Sources */,
+				6D4B68781C661CE4000E1101 /* PieceAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,16 +19,16 @@ class AbstractPieceAnimator: NSObject {
 
     private let basicForwardPieceAnimationKey = "com.antondomashnev.PuzzleAnimation.basicForwardPieceAnimationKey"
     private let basicBackwardPieceAnimationKey = "com.antondomashnev.PuzzleAnimation.basicBackwardPieceAnimationKey"
-    private var runningAnimations: [CAAnimation] = []
     
+    internal var runningAnimationsCount = 0
     internal var animationCompletion: PieceAnimatorCompletion?
     
     //MARK: - CAAnimationDelegate
     
     override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         if flag {
-            self.runningAnimations.removeObject(anim)
-            if self.runningAnimations.count == 0 {
+            self.runningAnimationsCount = max(0, self.runningAnimationsCount - 1)
+            if self.runningAnimationsCount == 0 {
                 self.animationCompletion?(finished: true)
                 self.animationCompletion = nil
             }
@@ -36,12 +36,8 @@ class AbstractPieceAnimator: NSObject {
         else {
             self.animationCompletion?(finished: false)
             self.animationCompletion = nil
-            self.runningAnimations.removeAll()
+            self.runningAnimationsCount = 0
         }
-    }
-    
-    override func animationDidStart(anim: CAAnimation) {
-        self.runningAnimations.append(anim)
     }
 }
 
@@ -82,6 +78,7 @@ class PieceForwardAnimator: AbstractPieceAnimator, PieceAnimator {
             else {
                 indexInCurrentGroup++
             }
+            self.runningAnimationsCount = self.runningAnimationsCount + 1
         }
     }
     
@@ -129,6 +126,7 @@ class PieceBackwardAnimator: AbstractPieceAnimator, PieceAnimator {
             else {
                 indexInCurrentGroup++
             }
+            self.runningAnimationsCount = self.runningAnimationsCount + 1
         }
     }
     
