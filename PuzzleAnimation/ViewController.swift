@@ -23,30 +23,33 @@ class ViewController: UIViewController {
     
     @IBAction func startForwardAnimationButtonClicked(sender: UIButton) {
         var forwardConfiguration = PuzzleAnimationConfiguration()
-        forwardConfiguration.animationScale = 2.5
         forwardConfiguration.animationVelocity = 20
+        forwardConfiguration.pieceAnimationDelay = PuzzleAnimationDelay(minimumDelay: 0.15, maximumDelay: 0.5)
+        forwardConfiguration.pieceGroupAnimationDelay = PuzzleAnimationDelay(minimumDelay: 0.25, maximumDelay: 0.5)
         self.forwardAnimation = ForwardPuzzleAnimation(viewToAnimate: self.imageView, configuration: forwardConfiguration)
         self.forwardAnimation!.start()
     }
     
     @IBAction func startBackwardAnimationButtonClicked(sender: UIButton) {
         var backwardConfiguration = PuzzleAnimationConfiguration()
-        backwardConfiguration.animationScale = 2.5
         backwardConfiguration.animationVelocity = 10
+        backwardConfiguration.pieceAnimationDelay = defaultBackwardPieceAnimationDelay
+        backwardConfiguration.pieceGroupAnimationDelay = defaultBackwardPieceGroupAnimationDelay
         self.backwardAnimation = BackwardPuzzleAnimation(viewToAnimate: self.imageView, configuration: backwardConfiguration)
         self.backwardAnimation!.start()
     }
     
     @IBAction func startBothAnimationsButtonClicked(sender: UIButton) {
         var forwardConfiguration = PuzzleAnimationConfiguration()
-        forwardConfiguration.animationScale = 2.5
         forwardConfiguration.animationVelocity = 20
-        
+        forwardConfiguration.pieceAnimationDelay = PuzzleAnimationDelay(minimumDelay: 0.15, maximumDelay: 0.5)
+        forwardConfiguration.pieceGroupAnimationDelay = PuzzleAnimationDelay(minimumDelay: 0.25, maximumDelay: 0.5)
         self.forwardAnimation = ForwardPuzzleAnimation(viewToAnimate: self.imageView, configuration: forwardConfiguration)
         
         var backwardConfiguration = PuzzleAnimationConfiguration()
-        backwardConfiguration.animationScale = 2.5
         backwardConfiguration.animationVelocity = 10
+        backwardConfiguration.pieceAnimationDelay = defaultBackwardPieceAnimationDelay
+        backwardConfiguration.pieceGroupAnimationDelay = defaultBackwardPieceGroupAnimationDelay
         self.backwardAnimation = BackwardPuzzleAnimation(viewToAnimate: self.imageView, configuration: backwardConfiguration)
 
         self.forwardAnimation?.animationCompletion = { [weak self] (animation, finished) in

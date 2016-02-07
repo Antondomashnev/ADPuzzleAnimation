@@ -77,7 +77,12 @@ public class PuzzleAnimation {
 /// The `ForwardPuzzleAnimation` defines the animation to create a full view from pieces
 public class ForwardPuzzleAnimation: PuzzleAnimation {
     
-    private let pieceAnimator: PieceForwardAnimator = PieceForwardAnimator()
+    private let pieceAnimator: PieceForwardAnimator
+    
+    override init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration) {
+        pieceAnimator = PieceForwardAnimator(animationConfiguration: configuration)
+        super.init(viewToAnimate: viewToAnimate, configuration: configuration)
+    }
     
     /**
      @see PuzzleAnimation start()
@@ -94,7 +99,7 @@ public class ForwardPuzzleAnimation: PuzzleAnimation {
             self.piecesContainerView!.addSubview(piece.view)
         }
         
-        self.pieceAnimator.addAnimationForPieces(self.pieces, withVelocity: self.configuration.animationVelocity, withScale: self.configuration.animationScale) {
+        self.pieceAnimator.addAnimationForPieces(self.pieces) {
             [weak self] (finished: Bool) in
             self?.finish()
             self?.animationCompletion?(animation: self!, finished: finished)
@@ -118,7 +123,12 @@ public class ForwardPuzzleAnimation: PuzzleAnimation {
 /// The `BackwardPuzzleAnimation` defines the animation to split view into pieces
 public class BackwardPuzzleAnimation: PuzzleAnimation {
     
-    private let pieceAnimator: PieceBackwardAnimator = PieceBackwardAnimator()
+    private let pieceAnimator: PieceBackwardAnimator
+    
+    override init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration) {
+        pieceAnimator = PieceBackwardAnimator(animationConfiguration: configuration)
+        super.init(viewToAnimate: viewToAnimate, configuration: configuration)
+    }
     
     /**
      @see PuzzleAnimation start()
@@ -135,7 +145,7 @@ public class BackwardPuzzleAnimation: PuzzleAnimation {
             self.piecesContainerView!.insertSubview(piece.view, atIndex: 0)
         }
         
-        self.pieceAnimator.addAnimationForPieces(self.pieces, withVelocity: self.configuration.animationVelocity, withScale: self.configuration.animationScale) {
+        self.pieceAnimator.addAnimationForPieces(self.pieces) {
             [weak self] (finished: Bool) in
             self?.finish()
             self?.animationCompletion?(animation: self!, finished: finished)
