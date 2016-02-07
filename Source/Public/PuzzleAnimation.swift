@@ -17,19 +17,11 @@ public class PuzzleAnimation {
     /// @note You can set it any time even during the animation
     public var animationCompletion: PuzzleAnimationCompletion?
     
-    /// Defines the animation speed. More speed -> less animation duration
-    /// @note The changes won't affect during the animation
-    public var animationVelocity: Double = 10
-    
-    /// Defines the animation piece's scale
-    /// @note The changes won't affect during the animation
-    public var animationScale: Double = 2.5
-    
     /// Information whether animation is currently running or not
     private(set) public var isAnimating: Bool = false
     
+    private let configuration: PuzzleAnimationConfiguration
     private let pieces: [Piece]
-    private let pieceSide: CGFloat
     private let viewToAnimate: UIView
     private var piecesContainerView: UIView?
     
@@ -41,9 +33,9 @@ public class PuzzleAnimation {
      
      - returns: newly created animation instance
      */
-    init(viewToAnimate: UIView, pieceSide: CGFloat) {
-        self.pieceSide = pieceSide
-        self.pieces = PiecesCreator.createPiecesFromView(viewToAnimate, pieceSideSize: pieceSide)
+    init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration) {
+        self.configuration = configuration
+        self.pieces = PiecesCreator.createPiecesFromView(viewToAnimate, pieceSideSize: configuration.pieceSide)
         self.viewToAnimate = viewToAnimate
     }
     
@@ -97,12 +89,12 @@ public class ForwardPuzzleAnimation: PuzzleAnimation {
         
         super.start()
         for piece in self.pieces {
-            piece.initialPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: self.pieceSide, fromView: self.piecesContainerView!, pieceScale: self.animationScale)
+            piece.initialPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: self.configuration.pieceSide, fromView: self.piecesContainerView!, pieceScale: self.configuration.animationScale)
             piece.desiredPosition = piece.originalPosition
             self.piecesContainerView!.addSubview(piece.view)
         }
         
-        self.pieceAnimator.addAnimationForPieces(self.pieces, withVelocity: self.animationVelocity, withScale: self.animationScale) {
+        self.pieceAnimator.addAnimationForPieces(self.pieces, withVelocity: self.configuration.animationVelocity, withScale: self.configuration.animationScale) {
             [weak self] (finished: Bool) in
             self?.finish()
             self?.animationCompletion?(animation: self!, finished: finished)
@@ -139,11 +131,11 @@ public class BackwardPuzzleAnimation: PuzzleAnimation {
         super.start()
         for piece in self.pieces {
             piece.initialPosition = piece.originalPosition
-            piece.desiredPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: self.pieceSide, fromView: self.piecesContainerView!, pieceScale: self.animationScale)
+            piece.desiredPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: self.configuration.pieceSide, fromView: self.piecesContainerView!, pieceScale: self.configuration.animationScale)
             self.piecesContainerView!.insertSubview(piece.view, atIndex: 0)
         }
         
-        self.pieceAnimator.addAnimationForPieces(self.pieces, withVelocity: self.animationVelocity, withScale: self.animationScale) {
+        self.pieceAnimator.addAnimationForPieces(self.pieces, withVelocity: self.configuration.animationVelocity, withScale: self.configuration.animationScale) {
             [weak self] (finished: Bool) in
             self?.finish()
             self?.animationCompletion?(animation: self!, finished: finished)

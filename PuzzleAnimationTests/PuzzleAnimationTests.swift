@@ -15,11 +15,14 @@ class PuzzleAnimatorTests: XCTestCase {
     
     var puzzleAnimation: PuzzleAnimation?
     var viewToAnimate: UIView?
+    var configuration: PuzzleAnimationConfiguration?
 
     override func setUp() {
         super.setUp()
+        self.configuration = PuzzleAnimationConfiguration()
+        self.configuration?.pieceSide = 20
         self.viewToAnimate = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        self.puzzleAnimation = PuzzleAnimation(viewToAnimate: self.viewToAnimate!, pieceSide: 20)
+        self.puzzleAnimation = PuzzleAnimation(viewToAnimate: self.viewToAnimate!, configuration: self.configuration!)
     }
     
     override func tearDown() {
@@ -53,7 +56,7 @@ class PuzzleAnimatorTests: XCTestCase {
     }
 
     func testThatOnStopBackwardAnimationCallsCompletionWithFinishedFalse() {
-        let backwardAnimation = BackwardPuzzleAnimation(viewToAnimate: self.viewToAnimate!, pieceSide: 10)
+        let backwardAnimation = BackwardPuzzleAnimation(viewToAnimate: self.viewToAnimate!, configuration: self.configuration!)
         backwardAnimation.start()
         
         var isFinished: Bool? = nil
@@ -65,7 +68,7 @@ class PuzzleAnimatorTests: XCTestCase {
     }
     
     func testThatOnStopForwardAnimationCallsCompletionWithFinishedFalse() {
-        let forwardAnimation = ForwardPuzzleAnimation(viewToAnimate: self.viewToAnimate!, pieceSide: 10)
+        let forwardAnimation = ForwardPuzzleAnimation(viewToAnimate: self.viewToAnimate!, configuration: self.configuration!)
         forwardAnimation.start()
         
         var isFinished: Bool? = nil
