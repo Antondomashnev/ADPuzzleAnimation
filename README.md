@@ -11,7 +11,7 @@ Custom animation for UIView inspired by Fabric - Answers animation.
 ## Usage
 =====
 
-For the example of usage see viewController.swift file in demo project
+For the detail example of usage see viewController.swift file in demo project.
 
 ```swift
     /**
@@ -26,6 +26,22 @@ For the example of usage see viewController.swift file in demo project
     
     /**
      *  Defines the structure that contains configurable parameters for puzzle animation
-     */
-    struct PuzzleAnimationConfiguration
+    */
+    struct PuzzleAnimationConfiguration {
+    
+      /// Defines the animation velocity. Higher velocity less animation duration
+      var animationVelocity: NSTimeInterval = 1
+    
+      /// Defines the delay between each piece in piece's group animation
+      var pieceAnimationDelay: PuzzleAnimationDelay = defaultForwardPieceAnimationDelay
+    
+      /// Defines the delay between each group of pieces animation
+      var pieceGroupAnimationDelay: PuzzleAnimationDelay = defaultForwardPieceGroupAnimationDelay
+    
+      /// Defines the animation piece's scale
+      var animationScale: Double = 2.5
+    
+      /// Each piece represents square and this value represents the number of pixels of square side
+      var pieceSide: CGFloat = 40
+}
 ```
