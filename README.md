@@ -14,7 +14,7 @@ Custom animation for UIView inspired by Fabric - Answers animation.
 For the example of usage see viewController.swift file in demo project
 
 ```swift
-/**
+    /**
      Desiganted initalizer for puzzle animation and it's subclasses
      
      - parameter viewToAnimate: view to render into pieces
