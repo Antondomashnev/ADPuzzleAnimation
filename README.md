@@ -8,10 +8,10 @@ Custom animation for UIView inspired by Fabric - Answers animation.
 <img src="http://i.giphy.com/u1rehLIHD822I.gif" width="320" /> <img src="http://i.giphy.com/5cdjNOUroagwM.gif" width="320" /> <img src="http://i.giphy.com/10h7RbGYReryNO.gif" width="320" /> <img src="http://i.giphy.com/iXlkj9HtB6FHO.gif" width="320" />
 
 -----
-## Usage
+## Easy to use
 =====
 
-For the detail example of usage see viewController.swift file in demo project.
+To create your first animation you need to know only about one method:
 
 ```swift
     /**
@@ -22,8 +22,12 @@ For the detail example of usage see viewController.swift file in demo project.
      
      - returns: newly created animation instance
      */
-    init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration)
+    init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration())
+    ```
+   
+It's flixible - you configure almost any parameter for the animation:
     
+```swift
     /**
      *  Defines the structure that contains configurable parameters for puzzle animation
     */
@@ -43,5 +47,27 @@ For the detail example of usage see viewController.swift file in demo project.
     
       /// Each piece represents square and this value represents the number of pixels of square side
       var pieceSide: CGFloat = 40
-}
-```
+    }
+    ```
+
+Handle callbacks about status to start new animation or do something else:
+```swift
+    /// Called when animation completed, stoped or failed
+    /// @note You can set it any time even during the animation
+    public var animationCompletion: PuzzleAnimationCompletion?
+    ```
+
+Intuitive and simple interface:
+```swift
+    /**
+     Starts the animation. Makes view to animate hidden
+    */
+    public func start()
+    
+    /**
+     Stops the animation. Removes all pieces from superview. Makes view to animate visible
+     */
+    public func stop()
+    ```
+    
+For the complete example check the viewController.swift
