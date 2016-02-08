@@ -23,7 +23,7 @@ To create your first animation you need to know only about one method:
 init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration())
 ```
    
-It's flixible - you configure almost any parameter for the animation:
+It's flixible - you can configure almost any parameter for the animation:
     
 ```swift
 /**
