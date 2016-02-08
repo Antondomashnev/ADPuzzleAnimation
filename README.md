@@ -12,60 +12,60 @@ Custom animation for UIView inspired by Fabric - Answers animation.
 To create your first animation you need to know only about one method:
 
 ```swift
-    /**
-     Desiganted initalizer for puzzle animation and it's subclasses
-     
-     - parameter viewToAnimate: view to render into pieces
-     - parameter configuration: animation configuration
-     
-     - returns: newly created animation instance
-     */
-    init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration())
-    ```
+/**
+ Desiganted initalizer for puzzle animation and it's subclasses
+ 
+ - parameter viewToAnimate: view to render into pieces
+ - parameter configuration: animation configuration
+ 
+ - returns: newly created animation instance
+ */
+init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration())
+```
    
 It's flixible - you configure almost any parameter for the animation:
     
 ```swift
-    /**
-     *  Defines the structure that contains configurable parameters for puzzle animation
-    */
-    struct PuzzleAnimationConfiguration {
-    
-      /// Defines the animation velocity. Higher velocity less animation duration
-      var animationVelocity: NSTimeInterval = 1
-    
-      /// Defines the delay between each piece in piece's group animation
-      var pieceAnimationDelay: PuzzleAnimationDelay = defaultForwardPieceAnimationDelay
-    
-      /// Defines the delay between each group of pieces animation
-      var pieceGroupAnimationDelay: PuzzleAnimationDelay = defaultForwardPieceGroupAnimationDelay
-    
-      /// Defines the animation piece's scale
-      var animationScale: Double = 2.5
-    
-      /// Each piece represents square and this value represents the number of pixels of square side
-      var pieceSide: CGFloat = 40
-    }
-    ```
+/**
+ *  Defines the structure that contains configurable parameters for puzzle animation
+*/
+struct PuzzleAnimationConfiguration {
+
+  /// Defines the animation velocity. Higher velocity less animation duration
+  var animationVelocity: NSTimeInterval = 1
+
+  /// Defines the delay between each piece in piece's group animation
+  var pieceAnimationDelay: PuzzleAnimationDelay = defaultForwardPieceAnimationDelay
+
+  /// Defines the delay between each group of pieces animation
+  var pieceGroupAnimationDelay: PuzzleAnimationDelay = defaultForwardPieceGroupAnimationDelay
+
+  /// Defines the animation piece's scale
+  var animationScale: Double = 2.5
+
+  /// Each piece represents square and this value represents the number of pixels of square side
+  var pieceSide: CGFloat = 40
+}
+```
 
 Handle callbacks about status to start new animation or do something else:
 ```swift
-    /// Called when animation completed, stoped or failed
-    /// @note You can set it any time even during the animation
-    public var animationCompletion: PuzzleAnimationCompletion?
-    ```
+/// Called when animation completed, stoped or failed
+/// @note You can set it any time even during the animation
+public var animationCompletion: PuzzleAnimationCompletion?
+```
 
 Intuitive and simple interface:
 ```swift
-    /**
-     Starts the animation. Makes view to animate hidden
-    */
-    public func start()
+/**
+ Starts the animation. Makes view to animate hidden
+*/
+public func start()
     
-    /**
-     Stops the animation. Removes all pieces from superview. Makes view to animate visible
-     */
-    public func stop()
-    ```
+/**
+ Stops the animation. Removes all pieces from superview. Makes view to animate visible
+ */
+public func stop()
+```
     
 For the complete example check the viewController.swift
