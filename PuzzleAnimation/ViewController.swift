@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         forwardConfiguration.animationVelocity = 20
         forwardConfiguration.pieceAnimationDelay = PuzzleAnimationDelay(minimumDelay: 0.15, maximumDelay: 0.5)
         forwardConfiguration.pieceGroupAnimationDelay = PuzzleAnimationDelay(minimumDelay: 0.25, maximumDelay: 0.5)
-        self.forwardAnimation = ForwardPuzzleAnimation(viewToAnimate: self.imageView, configuration: forwardConfiguration)
+        self.forwardAnimation = ForwardPuzzleAnimation(viewToAnimate: self.imageView)
         self.forwardAnimation!.start()
     }
     

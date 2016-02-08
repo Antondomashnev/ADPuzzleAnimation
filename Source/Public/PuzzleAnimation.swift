@@ -29,11 +29,11 @@ public class PuzzleAnimation {
      Desiganted initalizer for puzzle animation and it's subclasses
      
      - parameter viewToAnimate: view to render into pieces
-     - parameter pieceSide:     each piece represents square and this value represents the number of pixels of square side
+     - parameter configuration: animation configuration
      
      - returns: newly created animation instance
      */
-    init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration) {
+    init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration()) {
         self.configuration = configuration
         self.pieces = PiecesCreator.createPiecesFromView(viewToAnimate, pieceSideSize: configuration.pieceSide)
         self.viewToAnimate = viewToAnimate
@@ -42,7 +42,7 @@ public class PuzzleAnimation {
     //MARK: - Interface
     
     /**
-     Starts the animation. Makes view to anmate hidden
+     Starts the animation. Makes view to animate hidden
     */
     public func start() {
         let piecesContainerView = self.piecesContainerViewFromViewToAnimate(self.viewToAnimate)
@@ -79,7 +79,7 @@ public class ForwardPuzzleAnimation: PuzzleAnimation {
     
     private let pieceAnimator: PieceForwardAnimator
     
-    override init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration) {
+    override init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration()) {
         pieceAnimator = PieceForwardAnimator(animationConfiguration: configuration)
         super.init(viewToAnimate: viewToAnimate, configuration: configuration)
     }
@@ -125,7 +125,7 @@ public class BackwardPuzzleAnimation: PuzzleAnimation {
     
     private let pieceAnimator: PieceBackwardAnimator
     
-    override init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration) {
+    override init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration()) {
         pieceAnimator = PieceBackwardAnimator(animationConfiguration: configuration)
         super.init(viewToAnimate: viewToAnimate, configuration: configuration)
     }
