@@ -138,7 +138,7 @@ class PieceAnimatorTests: XCTestCase {
         forwardPieceAnimator.animationDidStop(animation3, finished: true)
         forwardPieceAnimator.animationDidStop(animation1, finished: true)
         
-        expect(isFinished).toEventually(beTrue())
+        expect(isFinished).to(beTrue())
     }
     
     func testThatItShouldCallCompletionWithFinishedNoIfAllAnimationIsFailed() {
