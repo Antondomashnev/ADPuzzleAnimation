@@ -22,24 +22,36 @@ class ViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func startForwardAnimationButtonClicked(sender: UIButton) {
-        self.forwardAnimation = ForwardPuzzleAnimation(viewToAnimate: self.imageView, pieceSide: 40)
-        self.forwardAnimation?.animationScale = 10
+        var forwardConfiguration = PuzzleAnimationConfiguration()
+        forwardConfiguration.animationVelocity = 20
+        forwardConfiguration.pieceAnimationDelay = PuzzleAnimationDelay(minimumDelay: 0.15, maximumDelay: 0.5)
+        forwardConfiguration.pieceGroupAnimationDelay = PuzzleAnimationDelay(minimumDelay: 0.25, maximumDelay: 0.5)
+        self.forwardAnimation = ForwardPuzzleAnimation(viewToAnimate: self.imageView)
         self.forwardAnimation!.start()
     }
     
     @IBAction func startBackwardAnimationButtonClicked(sender: UIButton) {
-        self.backwardAnimation = BackwardPuzzleAnimation(viewToAnimate: self.imageView, pieceSide: 40)
-        self.backwardAnimation?.animationScale = 10
+        var backwardConfiguration = PuzzleAnimationConfiguration()
+        backwardConfiguration.animationVelocity = 10
+        backwardConfiguration.pieceAnimationDelay = defaultBackwardPieceAnimationDelay
+        backwardConfiguration.pieceGroupAnimationDelay = defaultBackwardPieceGroupAnimationDelay
+        self.backwardAnimation = BackwardPuzzleAnimation(viewToAnimate: self.imageView, configuration: backwardConfiguration)
         self.backwardAnimation!.start()
     }
     
     @IBAction func startBothAnimationsButtonClicked(sender: UIButton) {
-        self.forwardAnimation = ForwardPuzzleAnimation(viewToAnimate: self.imageView, pieceSide: 40)
-        self.forwardAnimation?.animationScale = 10
+        var forwardConfiguration = PuzzleAnimationConfiguration()
+        forwardConfiguration.animationVelocity = 20
+        forwardConfiguration.pieceAnimationDelay = PuzzleAnimationDelay(minimumDelay: 0.15, maximumDelay: 0.5)
+        forwardConfiguration.pieceGroupAnimationDelay = PuzzleAnimationDelay(minimumDelay: 0.25, maximumDelay: 0.5)
+        self.forwardAnimation = ForwardPuzzleAnimation(viewToAnimate: self.imageView, configuration: forwardConfiguration)
         
-        self.backwardAnimation = BackwardPuzzleAnimation(viewToAnimate: self.imageView, pieceSide: 40)
-        self.backwardAnimation?.animationScale = 10
-        
+        var backwardConfiguration = PuzzleAnimationConfiguration()
+        backwardConfiguration.animationVelocity = 10
+        backwardConfiguration.pieceAnimationDelay = defaultBackwardPieceAnimationDelay
+        backwardConfiguration.pieceGroupAnimationDelay = defaultBackwardPieceGroupAnimationDelay
+        self.backwardAnimation = BackwardPuzzleAnimation(viewToAnimate: self.imageView, configuration: backwardConfiguration)
+
         self.forwardAnimation?.animationCompletion = { [weak self] (animation, finished) in
             if finished {
                 let seconds = 0.5
@@ -50,6 +62,13 @@ class ViewController: UIViewController {
                 })
             }
         }
+        
+        self.backwardAnimation?.animationCompletion = { [weak self] (animation, finished) in
+            if finished {
+                self?.imageView.hidden = true
+            }
+        }
+        
         self.forwardAnimation!.start()
     }
 }

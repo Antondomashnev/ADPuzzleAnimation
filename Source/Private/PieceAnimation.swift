@@ -20,7 +20,7 @@ extension CAAnimation {
         }
         
         func setAnimationDurationBasedOnVelocity(animation: CAAnimation, velocity: Double) {
-            animation.duration = velocity / 10.0
+            animation.duration = 10.0 / velocity
         }
         
         let moveAnimation: CABasicAnimation = CABasicAnimation(keyPath: "position")

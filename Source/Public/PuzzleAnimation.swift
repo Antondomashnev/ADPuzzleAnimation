@@ -17,19 +17,11 @@ public class PuzzleAnimation {
     /// @note You can set it any time even during the animation
     public var animationCompletion: PuzzleAnimationCompletion?
     
-    /// Defines the animation speed. More speed -> less animation duration
-    /// @note The changes won't affect during the animation
-    public var animationVelocity: Double = 10
-    
-    /// Defines the animation piece's scale
-    /// @note The changes won't affect during the animation
-    public var animationScale: Double = 2.5
-    
     /// Information whether animation is currently running or not
     private(set) public var isAnimating: Bool = false
     
+    private let configuration: PuzzleAnimationConfiguration
     private let pieces: [Piece]
-    private let pieceSide: CGFloat
     private let viewToAnimate: UIView
     private var piecesContainerView: UIView?
     
@@ -37,20 +29,20 @@ public class PuzzleAnimation {
      Desiganted initalizer for puzzle animation and it's subclasses
      
      - parameter viewToAnimate: view to render into pieces
-     - parameter pieceSide:     each piece represents square and this value represents the number of pixels of square side
+     - parameter configuration: animation configuration
      
      - returns: newly created animation instance
      */
-    init(viewToAnimate: UIView, pieceSide: CGFloat) {
-        self.pieceSide = pieceSide
-        self.pieces = PiecesCreator.createPiecesFromView(viewToAnimate, pieceSideSize: pieceSide)
+    init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration()) {
+        self.configuration = configuration
+        self.pieces = PiecesCreator.createPiecesFromView(viewToAnimate, pieceSideSize: configuration.pieceSide)
         self.viewToAnimate = viewToAnimate
     }
     
     //MARK: - Interface
     
     /**
-     Starts the animation. Makes view to anmate hidden
+     Starts the animation. Makes view to animate hidden
     */
     public func start() {
         let piecesContainerView = self.piecesContainerViewFromViewToAnimate(self.viewToAnimate)
@@ -85,7 +77,12 @@ public class PuzzleAnimation {
 /// The `ForwardPuzzleAnimation` defines the animation to create a full view from pieces
 public class ForwardPuzzleAnimation: PuzzleAnimation {
     
-    private let pieceAnimator: PieceForwardAnimator = PieceForwardAnimator()
+    private let pieceAnimator: PieceForwardAnimator
+    
+    override init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration()) {
+        pieceAnimator = PieceForwardAnimator(animationConfiguration: configuration)
+        super.init(viewToAnimate: viewToAnimate, configuration: configuration)
+    }
     
     /**
      @see PuzzleAnimation start()
@@ -97,12 +94,12 @@ public class ForwardPuzzleAnimation: PuzzleAnimation {
         
         super.start()
         for piece in self.pieces {
-            piece.initialPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: self.pieceSide, fromView: self.piecesContainerView!, pieceScale: self.animationScale)
+            piece.initialPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: self.configuration.pieceSide, fromView: self.piecesContainerView!, pieceScale: self.configuration.animationScale)
             piece.desiredPosition = piece.originalPosition
             self.piecesContainerView!.addSubview(piece.view)
         }
         
-        self.pieceAnimator.addAnimationForPieces(self.pieces, withVelocity: self.animationVelocity, withScale: self.animationScale) {
+        self.pieceAnimator.addAnimationForPieces(self.pieces) {
             [weak self] (finished: Bool) in
             self?.finish()
             self?.animationCompletion?(animation: self!, finished: finished)
@@ -126,7 +123,12 @@ public class ForwardPuzzleAnimation: PuzzleAnimation {
 /// The `BackwardPuzzleAnimation` defines the animation to split view into pieces
 public class BackwardPuzzleAnimation: PuzzleAnimation {
     
-    private let pieceAnimator: PieceBackwardAnimator = PieceBackwardAnimator()
+    private let pieceAnimator: PieceBackwardAnimator
+    
+    override init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration()) {
+        pieceAnimator = PieceBackwardAnimator(animationConfiguration: configuration)
+        super.init(viewToAnimate: viewToAnimate, configuration: configuration)
+    }
     
     /**
      @see PuzzleAnimation start()
@@ -139,11 +141,11 @@ public class BackwardPuzzleAnimation: PuzzleAnimation {
         super.start()
         for piece in self.pieces {
             piece.initialPosition = piece.originalPosition
-            piece.desiredPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: self.pieceSide, fromView: self.piecesContainerView!, pieceScale: self.animationScale)
+            piece.desiredPosition = PiecePositioner.piecePositionOutsideOfView(piece, pieceWidth: self.configuration.pieceSide, fromView: self.piecesContainerView!, pieceScale: self.configuration.animationScale)
             self.piecesContainerView!.insertSubview(piece.view, atIndex: 0)
         }
         
-        self.pieceAnimator.addAnimationForPieces(self.pieces, withVelocity: self.animationVelocity, withScale: self.animationScale) {
+        self.pieceAnimator.addAnimationForPieces(self.pieces) {
             [weak self] (finished: Bool) in
             self?.finish()
             self?.animationCompletion?(animation: self!, finished: finished)

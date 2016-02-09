@@ -27,8 +27,10 @@ class PieceAnimatorTests: XCTestCase {
         piece3.initialPosition = CGPoint(x: 0, y: 0)
         piece3.desiredPosition = CGPoint(x: 0, y: 0)
         
-        let forwardPieceAnimator = PieceForwardAnimator()
-        forwardPieceAnimator.addAnimationForPieces([piece1, piece2, piece3], withVelocity: 10, withScale: 2.5)
+        let configuration = PuzzleAnimationConfiguration()
+        
+        let forwardPieceAnimator = PieceForwardAnimator(animationConfiguration: configuration)
+        forwardPieceAnimator.addAnimationForPieces([piece1, piece2, piece3])
         
         for piece in [piece1, piece2, piece3] {
             expect(piece.view.layer.animationForKey("com.antondomashnev.PuzzleAnimation.basicForwardPieceAnimationKey")).toNot(beNil())
@@ -50,7 +52,9 @@ class PieceAnimatorTests: XCTestCase {
         view2.layer.addAnimation(animation2, forKey: "com.antondomashnev.PuzzleAnimation.basicForwardPieceAnimationKey")
         view3.layer.addAnimation(animation3, forKey: "com.antondomashnev.PuzzleAnimation.basicForwardPieceAnimationKey")
         
-        let forwardPieceAnimator = PieceForwardAnimator()
+        let configuration = PuzzleAnimationConfiguration()
+        
+        let forwardPieceAnimator = PieceForwardAnimator(animationConfiguration: configuration)
         forwardPieceAnimator.removeAnimationFromPieces([piece1, piece2, piece3])
         
         for piece in [piece1, piece2, piece3] {
@@ -72,8 +76,10 @@ class PieceAnimatorTests: XCTestCase {
         piece3.initialPosition = CGPoint(x: 0, y: 0)
         piece3.desiredPosition = CGPoint(x: 0, y: 0)
         
-        let backwardPieceAnimator = PieceBackwardAnimator()
-        backwardPieceAnimator.addAnimationForPieces([piece1, piece2, piece3], withVelocity: 10, withScale: 2.5)
+        let configuration = PuzzleAnimationConfiguration()
+        
+        let backwardPieceAnimator = PieceBackwardAnimator(animationConfiguration: configuration)
+        backwardPieceAnimator.addAnimationForPieces([piece1, piece2, piece3])
         
         for piece in [piece1, piece2, piece3] {
             expect(piece.view.layer.animationForKey("com.antondomashnev.PuzzleAnimation.basicBackwardPieceAnimationKey")).toNot(beNil())
@@ -95,7 +101,9 @@ class PieceAnimatorTests: XCTestCase {
         view2.layer.addAnimation(animation2, forKey: "com.antondomashnev.PuzzleAnimation.basicBackwardPieceAnimationKey")
         view3.layer.addAnimation(animation3, forKey: "com.antondomashnev.PuzzleAnimation.basicBackwardPieceAnimationKey")
         
-        let backwardPieceAnimator = PieceBackwardAnimator()
+        let configuration = PuzzleAnimationConfiguration()
+        
+        let backwardPieceAnimator = PieceBackwardAnimator(animationConfiguration: configuration)
         backwardPieceAnimator.removeAnimationFromPieces([piece1, piece2, piece3])
         
         for piece in [piece1, piece2, piece3] {
@@ -105,8 +113,8 @@ class PieceAnimatorTests: XCTestCase {
     
     func testThatItShouldCallCompletionWithFinishedYesIfAddAnimationWithoutPieces() {
         var isFinished: Bool? = nil
-        let forwardPieceAnimator = PieceForwardAnimator()
-        forwardPieceAnimator.addAnimationForPieces([], withVelocity: 10, withScale: 2.5) { finished in
+        let forwardPieceAnimator = PieceForwardAnimator(animationConfiguration: PuzzleAnimationConfiguration())
+        forwardPieceAnimator.addAnimationForPieces([]) { finished in
             isFinished = finished
         }
         
@@ -114,7 +122,7 @@ class PieceAnimatorTests: XCTestCase {
     }
 
     func testThatItShouldCallCompletionWithFinishedYesIfAllAnimationsAreFinished() {
-        let forwardPieceAnimator = PieceForwardAnimator()
+        let forwardPieceAnimator = PieceForwardAnimator(animationConfiguration: PuzzleAnimationConfiguration())
         var isFinished: Bool? = nil
         forwardPieceAnimator.animationCompletion = { finished in
             isFinished = finished
@@ -134,7 +142,7 @@ class PieceAnimatorTests: XCTestCase {
     }
     
     func testThatItShouldCallCompletionWithFinishedNoIfAllAnimationIsFailed() {
-        let forwardPieceAnimator = PieceForwardAnimator()
+        let forwardPieceAnimator = PieceForwardAnimator(animationConfiguration: PuzzleAnimationConfiguration())
         var isFinished: Bool? = nil
         forwardPieceAnimator.animationCompletion = { finished in
             isFinished = finished

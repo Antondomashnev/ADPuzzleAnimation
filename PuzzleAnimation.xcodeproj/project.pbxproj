@@ -26,6 +26,7 @@
 		6D4B68791C661CE4000E1101 /* PiecePositioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B68701C661CE4000E1101 /* PiecePositioner.swift */; };
 		6D4B687A1C661CE4000E1101 /* PiecesCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B68711C661CE4000E1101 /* PiecesCreator.swift */; };
 		6D4B687C1C661D06000E1101 /* PuzzleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B687B1C661D06000E1101 /* PuzzleAnimation.swift */; };
+		6D4B68841C679019000E1101 /* PuzzleAnimationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B68831C679019000E1101 /* PuzzleAnimationConfiguration.swift */; };
 		6D4E487E1C4BF007001DF81E /* PiecesCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4E487D1C4BF007001DF81E /* PiecesCreatorTests.swift */; };
 		6D6BB73D1C54DDCC000BC71B /* PieceAnimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB73C1C54DDCC000BC71B /* PieceAnimatorTests.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		6D4B68701C661CE4000E1101 /* PiecePositioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecePositioner.swift; sourceTree = "<group>"; };
 		6D4B68711C661CE4000E1101 /* PiecesCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecesCreator.swift; sourceTree = "<group>"; };
 		6D4B687B1C661D06000E1101 /* PuzzleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleAnimation.swift; sourceTree = "<group>"; };
+		6D4B68831C679019000E1101 /* PuzzleAnimationConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleAnimationConfiguration.swift; sourceTree = "<group>"; };
 		6D4E487D1C4BF007001DF81E /* PiecesCreatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecesCreatorTests.swift; sourceTree = "<group>"; };
 		6D6BB73C1C54DDCC000BC71B /* PieceAnimatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceAnimatorTests.swift; sourceTree = "<group>"; };
 		6DB806D3D47036B0B3ABA217 /* Pods_PuzzleAnimationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PuzzleAnimationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				6D4B687B1C661D06000E1101 /* PuzzleAnimation.swift */,
+				6D4B68831C679019000E1101 /* PuzzleAnimationConfiguration.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				6D4B68741C661CE4000E1101 /* CollectionShuffle.swift in Sources */,
 				6D4B68771C661CE4000E1101 /* PieceAnimation.swift in Sources */,
 				6D4B68781C661CE4000E1101 /* PieceAnimator.swift in Sources */,
+				6D4B68841C679019000E1101 /* PuzzleAnimationConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
