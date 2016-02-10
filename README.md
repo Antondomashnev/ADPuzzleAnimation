@@ -70,3 +70,15 @@ public func stop()
 ```
     
 For the complete example check the viewController.swift
+
+## Easy to install
+
+### CocoaPods
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+pod 'PuzzleAnimation', '~> 1.0.0'
+```
