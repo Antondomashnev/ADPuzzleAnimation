@@ -1,7 +1,7 @@
 # Meet ADPuzzleAnimation
 
 ![](https://travis-ci.org/Antondomashnev/ADPuzzleAnimation.svg?branch=master)
-[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/PuzzleAnimation.svg)](https://img.shields.io/cocoapods/v/PuzzleAnimation.svg)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PuzzleAnimation.svg)](https://img.shields.io/cocoapods/v/PuzzleAnimation.svg)
 
 ## Whats inside
 Custom animation for UIView inspired by Fabric - Answers animation.
