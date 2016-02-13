@@ -49,7 +49,7 @@ class PiecePositioner {
      */
     class func piecePositionOutsideOfView(piece: Piece, pieceWidth: CGFloat, fromView pieceContainerView: UIView, screenSize: CGSize = UIScreen.mainScreen().bounds.size, pieceScale: Double = 1) -> CGPoint {
         let delta: CGFloat = pieceWidth * CGFloat(pieceScale)
-        let pieceContainerShiftInWindow = pieceContainerView.convertPoint(CGPointZero, toView: nil)
+        let pieceContainerShiftInWindow = (pieceContainerView.superview == nil) ? pieceContainerView.frame.origin : pieceContainerView.convertPoint(CGPointZero, toView: nil)
         
         switch self.cornerForPosition(piece.originalPosition, inRect: pieceContainerView.bounds) {
         case .TopLeft:
