@@ -1,7 +1,8 @@
-# Meet ADPuzzleAnimation
+# ADPuzzleAnimation
 
 ![](https://travis-ci.org/Antondomashnev/ADPuzzleAnimation.svg?branch=master)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PuzzleAnimation.svg)](https://img.shields.io/cocoapods/v/PuzzleAnimation.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## Whats inside
 Custom animation for UIView inspired by Fabric - Answers animation.
@@ -75,6 +76,8 @@ For the complete example check the viewController.swift
 
 ### CocoaPods
 
+To integrate ADPuzzleAnimation into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
@@ -82,3 +85,12 @@ use_frameworks!
 
 pod 'PuzzleAnimation', '~> 1.0.0'
 ```
+### Carthage
+
+To integrate ADPuzzleAnimation into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "Antondomashnev/ADPuzzleAnimation" ~> 1.0.0
+```
+
+Run `carthage update` to build the framework and drag the built `ADPuzzleAnimation.framework` into your Xcode project.
