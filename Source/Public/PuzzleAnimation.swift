@@ -33,7 +33,7 @@ public class PuzzleAnimation {
      
      - returns: newly created animation instance
      */
-    init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration()) {
+    public init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration()) {
         self.configuration = configuration
         self.pieces = PiecesCreator.createPiecesFromView(viewToAnimate, pieceSideSize: configuration.pieceSide)
         self.viewToAnimate = viewToAnimate
@@ -79,7 +79,7 @@ public class ForwardPuzzleAnimation: PuzzleAnimation {
     
     private let pieceAnimator: PieceForwardAnimator
     
-    override init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration()) {
+    public override init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration()) {
         pieceAnimator = PieceForwardAnimator(animationConfiguration: configuration)
         super.init(viewToAnimate: viewToAnimate, configuration: configuration)
     }
@@ -125,7 +125,7 @@ public class BackwardPuzzleAnimation: PuzzleAnimation {
     
     private let pieceAnimator: PieceBackwardAnimator
     
-    override init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration()) {
+    public override init(viewToAnimate: UIView, configuration: PuzzleAnimationConfiguration = PuzzleAnimationConfiguration()) {
         pieceAnimator = PieceBackwardAnimator(animationConfiguration: configuration)
         super.init(viewToAnimate: viewToAnimate, configuration: configuration)
     }

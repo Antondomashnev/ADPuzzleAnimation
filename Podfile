@@ -1,10 +1,10 @@
 use_frameworks!
 
-target 'PuzzleAnimation' do
+target 'ADPuzzleAnimation' do
 
 end
 
-target 'PuzzleAnimationTests' do
+target 'ADPuzzleAnimationTests' do
 	pod 'FBSnapshotTestCase'
     pod 'Nimble', '3.0.0'
     pod 'OCMock'

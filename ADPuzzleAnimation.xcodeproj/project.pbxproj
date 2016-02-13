@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D7A46761C6F6B10009897AC /* ADPuzzleAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D7A46751C6F6B10009897AC /* ADPuzzleAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D7A468B1C6F6B4C009897AC /* ArrayRemoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46801C6F6B4C009897AC /* ArrayRemoveObject.swift */; };
+		6D7A468C1C6F6B4C009897AC /* CollectionShuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46811C6F6B4C009897AC /* CollectionShuffle.swift */; };
+		6D7A468D1C6F6B4C009897AC /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46821C6F6B4C009897AC /* Random.swift */; };
+		6D7A468E1C6F6B4C009897AC /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46831C6F6B4C009897AC /* Piece.swift */; };
+		6D7A468F1C6F6B4C009897AC /* PieceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46841C6F6B4C009897AC /* PieceAnimation.swift */; };
+		6D7A46901C6F6B4C009897AC /* PieceAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46851C6F6B4C009897AC /* PieceAnimator.swift */; };
+		6D7A46911C6F6B4C009897AC /* PiecePositioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46861C6F6B4C009897AC /* PiecePositioner.swift */; };
+		6D7A46921C6F6B4C009897AC /* PiecesCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46871C6F6B4C009897AC /* PiecesCreator.swift */; };
+		6D7A46931C6F6B4C009897AC /* PuzzleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46891C6F6B4C009897AC /* PuzzleAnimation.swift */; };
+		6D7A46941C6F6B4C009897AC /* PuzzleAnimationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A468A1C6F6B4C009897AC /* PuzzleAnimationConfiguration.swift */; };
+		6D7A469E1C6F6B7B009897AC /* ADPuzzleAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7A46721C6F6B10009897AC /* ADPuzzleAnimation.framework */; };
+		6D7A46AB1C6F6CF0009897AC /* PieceAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46A51C6F6CF0009897AC /* PieceAnimationTests.swift */; };
+		6D7A46AC1C6F6CF0009897AC /* PieceAnimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46A61C6F6CF0009897AC /* PieceAnimatorTests.swift */; };
+		6D7A46AD1C6F6CF0009897AC /* PiecePositionerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46A71C6F6CF0009897AC /* PiecePositionerTests.swift */; };
+		6D7A46AE1C6F6CF0009897AC /* PiecesCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46A81C6F6CF0009897AC /* PiecesCreatorTests.swift */; };
+		6D7A46AF1C6F6CF0009897AC /* PieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46A91C6F6CF0009897AC /* PieceTests.swift */; };
+		6D7A46B01C6F6CF0009897AC /* PuzzleAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46AA1C6F6CF0009897AC /* PuzzleAnimationTests.swift */; };
+		6D7A46BC1C6F6D2A009897AC /* MediaForTests.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D7A46BB1C6F6D2A009897AC /* MediaForTests.xcassets */; };
+		C197D93A22C29D6D6B527DCE /* Pods_ADPuzzleAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52FC76265CF9589F842BC29 /* Pods_ADPuzzleAnimationTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D7A469F1C6F6B7B009897AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D7A46691C6F6B10009897AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D7A46711C6F6B10009897AC;
+			remoteInfo = ADPuzzleAnimation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3DD23AA5F96AAC2FB380B860 /* Pods-ADPuzzleAnimationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADPuzzleAnimationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADPuzzleAnimationTests/Pods-ADPuzzleAnimationTests.release.xcconfig"; sourceTree = "<group>"; };
+		63D6E1FC2451449A3AECF88A /* Pods-ADPuzzleAnimationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADPuzzleAnimationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADPuzzleAnimationTests/Pods-ADPuzzleAnimationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D7A46721C6F6B10009897AC /* ADPuzzleAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ADPuzzleAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D7A46751C6F6B10009897AC /* ADPuzzleAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADPuzzleAnimation.h; sourceTree = "<group>"; };
+		6D7A46771C6F6B10009897AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D7A46801C6F6B4C009897AC /* ArrayRemoveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayRemoveObject.swift; sourceTree = "<group>"; };
+		6D7A46811C6F6B4C009897AC /* CollectionShuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionShuffle.swift; sourceTree = "<group>"; };
+		6D7A46821C6F6B4C009897AC /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		6D7A46831C6F6B4C009897AC /* Piece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
+		6D7A46841C6F6B4C009897AC /* PieceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceAnimation.swift; sourceTree = "<group>"; };
+		6D7A46851C6F6B4C009897AC /* PieceAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceAnimator.swift; sourceTree = "<group>"; };
+		6D7A46861C6F6B4C009897AC /* PiecePositioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecePositioner.swift; sourceTree = "<group>"; };
+		6D7A46871C6F6B4C009897AC /* PiecesCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecesCreator.swift; sourceTree = "<group>"; };
+		6D7A46891C6F6B4C009897AC /* PuzzleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleAnimation.swift; sourceTree = "<group>"; };
+		6D7A468A1C6F6B4C009897AC /* PuzzleAnimationConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleAnimationConfiguration.swift; sourceTree = "<group>"; };
+		6D7A46991C6F6B7B009897AC /* ADPuzzleAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADPuzzleAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D7A469D1C6F6B7B009897AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D7A46A51C6F6CF0009897AC /* PieceAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceAnimationTests.swift; sourceTree = "<group>"; };
+		6D7A46A61C6F6CF0009897AC /* PieceAnimatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceAnimatorTests.swift; sourceTree = "<group>"; };
+		6D7A46A71C6F6CF0009897AC /* PiecePositionerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecePositionerTests.swift; sourceTree = "<group>"; };
+		6D7A46A81C6F6CF0009897AC /* PiecesCreatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecesCreatorTests.swift; sourceTree = "<group>"; };
+		6D7A46A91C6F6CF0009897AC /* PieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceTests.swift; sourceTree = "<group>"; };
+		6D7A46AA1C6F6CF0009897AC /* PuzzleAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleAnimationTests.swift; sourceTree = "<group>"; };
+		6D7A46BB1C6F6D2A009897AC /* MediaForTests.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MediaForTests.xcassets; sourceTree = "<group>"; };
+		C52FC76265CF9589F842BC29 /* Pods_ADPuzzleAnimationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADPuzzleAnimationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D7A466E1C6F6B10009897AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D7A46961C6F6B7B009897AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D7A469E1C6F6B7B009897AC /* ADPuzzleAnimation.framework in Frameworks */,
+				C197D93A22C29D6D6B527DCE /* Pods_ADPuzzleAnimationTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E6A3425979A6DAD3F110C3F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63D6E1FC2451449A3AECF88A /* Pods-ADPuzzleAnimationTests.debug.xcconfig */,
+				3DD23AA5F96AAC2FB380B860 /* Pods-ADPuzzleAnimationTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6D7A46681C6F6B10009897AC = {
+			isa = PBXGroup;
+			children = (
+				6D7A467D1C6F6B4C009897AC /* Source */,
+				6D7A46741C6F6B10009897AC /* ADPuzzleAnimation */,
+				6D7A469A1C6F6B7B009897AC /* ADPuzzleAnimationTests */,
+				6D7A46731C6F6B10009897AC /* Products */,
+				3E6A3425979A6DAD3F110C3F /* Pods */,
+				9C5F106CBF14A15444B56CCC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6D7A46731C6F6B10009897AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D7A46721C6F6B10009897AC /* ADPuzzleAnimation.framework */,
+				6D7A46991C6F6B7B009897AC /* ADPuzzleAnimationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D7A46741C6F6B10009897AC /* ADPuzzleAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				6D7A46751C6F6B10009897AC /* ADPuzzleAnimation.h */,
+				6D7A46771C6F6B10009897AC /* Info.plist */,
+			);
+			path = ADPuzzleAnimation;
+			sourceTree = "<group>";
+		};
+		6D7A467D1C6F6B4C009897AC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6D7A467E1C6F6B4C009897AC /* Private */,
+				6D7A46881C6F6B4C009897AC /* Public */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		6D7A467E1C6F6B4C009897AC /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				6D7A467F1C6F6B4C009897AC /* External */,
+				6D7A46831C6F6B4C009897AC /* Piece.swift */,
+				6D7A46841C6F6B4C009897AC /* PieceAnimation.swift */,
+				6D7A46851C6F6B4C009897AC /* PieceAnimator.swift */,
+				6D7A46861C6F6B4C009897AC /* PiecePositioner.swift */,
+				6D7A46871C6F6B4C009897AC /* PiecesCreator.swift */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		6D7A467F1C6F6B4C009897AC /* External */ = {
+			isa = PBXGroup;
+			children = (
+				6D7A46801C6F6B4C009897AC /* ArrayRemoveObject.swift */,
+				6D7A46811C6F6B4C009897AC /* CollectionShuffle.swift */,
+				6D7A46821C6F6B4C009897AC /* Random.swift */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		6D7A46881C6F6B4C009897AC /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				6D7A46891C6F6B4C009897AC /* PuzzleAnimation.swift */,
+				6D7A468A1C6F6B4C009897AC /* PuzzleAnimationConfiguration.swift */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		6D7A469A1C6F6B7B009897AC /* ADPuzzleAnimationTests */ = {
+			isa = PBXGroup;
+			children = (
+				6D7A46BB1C6F6D2A009897AC /* MediaForTests.xcassets */,
+				6D7A46A51C6F6CF0009897AC /* PieceAnimationTests.swift */,
+				6D7A46A61C6F6CF0009897AC /* PieceAnimatorTests.swift */,
+				6D7A46A71C6F6CF0009897AC /* PiecePositionerTests.swift */,
+				6D7A46A81C6F6CF0009897AC /* PiecesCreatorTests.swift */,
+				6D7A46A91C6F6CF0009897AC /* PieceTests.swift */,
+				6D7A46AA1C6F6CF0009897AC /* PuzzleAnimationTests.swift */,
+				6D7A469D1C6F6B7B009897AC /* Info.plist */,
+			);
+			path = ADPuzzleAnimationTests;
+			sourceTree = "<group>";
+		};
+		9C5F106CBF14A15444B56CCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C52FC76265CF9589F842BC29 /* Pods_ADPuzzleAnimationTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6D7A466F1C6F6B10009897AC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D7A46761C6F6B10009897AC /* ADPuzzleAnimation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6D7A46711C6F6B10009897AC /* ADPuzzleAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D7A467A1C6F6B10009897AC /* Build configuration list for PBXNativeTarget "ADPuzzleAnimation" */;
+			buildPhases = (
+				6D7A466D1C6F6B10009897AC /* Sources */,
+				6D7A466E1C6F6B10009897AC /* Frameworks */,
+				6D7A466F1C6F6B10009897AC /* Headers */,
+				6D7A46701C6F6B10009897AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ADPuzzleAnimation;
+			productName = ADPuzzleAnimation;
+			productReference = 6D7A46721C6F6B10009897AC /* ADPuzzleAnimation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6D7A46981C6F6B7B009897AC /* ADPuzzleAnimationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D7A46A11C6F6B7B009897AC /* Build configuration list for PBXNativeTarget "ADPuzzleAnimationTests" */;
+			buildPhases = (
+				EE449C31F63AF981B9AB24CF /* Check Pods Manifest.lock */,
+				6D7A46951C6F6B7B009897AC /* Sources */,
+				6D7A46961C6F6B7B009897AC /* Frameworks */,
+				6D7A46971C6F6B7B009897AC /* Resources */,
+				BC848FD776B7AE8C2CDFA1E8 /* Embed Pods Frameworks */,
+				C74067DDF3E15754B8940160 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D7A46A01C6F6B7B009897AC /* PBXTargetDependency */,
+			);
+			name = ADPuzzleAnimationTests;
+			productName = ADPuzzleAnimationTests;
+			productReference = 6D7A46991C6F6B7B009897AC /* ADPuzzleAnimationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D7A46691C6F6B10009897AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Anton Domashnev";
+				TargetAttributes = {
+					6D7A46711C6F6B10009897AC = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					6D7A46981C6F6B7B009897AC = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 6D7A466C1C6F6B10009897AC /* Build configuration list for PBXProject "ADPuzzleAnimation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6D7A46681C6F6B10009897AC;
+			productRefGroup = 6D7A46731C6F6B10009897AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D7A46711C6F6B10009897AC /* ADPuzzleAnimation */,
+				6D7A46981C6F6B7B009897AC /* ADPuzzleAnimationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D7A46701C6F6B10009897AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D7A46971C6F6B7B009897AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D7A46BC1C6F6D2A009897AC /* MediaForTests.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BC848FD776B7AE8C2CDFA1E8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADPuzzleAnimationTests/Pods-ADPuzzleAnimationTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C74067DDF3E15754B8940160 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADPuzzleAnimationTests/Pods-ADPuzzleAnimationTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE449C31F63AF981B9AB24CF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D7A466D1C6F6B10009897AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D7A46911C6F6B4C009897AC /* PiecePositioner.swift in Sources */,
+				6D7A468E1C6F6B4C009897AC /* Piece.swift in Sources */,
+				6D7A468B1C6F6B4C009897AC /* ArrayRemoveObject.swift in Sources */,
+				6D7A468F1C6F6B4C009897AC /* PieceAnimation.swift in Sources */,
+				6D7A46931C6F6B4C009897AC /* PuzzleAnimation.swift in Sources */,
+				6D7A46941C6F6B4C009897AC /* PuzzleAnimationConfiguration.swift in Sources */,
+				6D7A468C1C6F6B4C009897AC /* CollectionShuffle.swift in Sources */,
+				6D7A468D1C6F6B4C009897AC /* Random.swift in Sources */,
+				6D7A46901C6F6B4C009897AC /* PieceAnimator.swift in Sources */,
+				6D7A46921C6F6B4C009897AC /* PiecesCreator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D7A46951C6F6B7B009897AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D7A46B01C6F6CF0009897AC /* PuzzleAnimationTests.swift in Sources */,
+				6D7A46AF1C6F6CF0009897AC /* PieceTests.swift in Sources */,
+				6D7A46AB1C6F6CF0009897AC /* PieceAnimationTests.swift in Sources */,
+				6D7A46AD1C6F6CF0009897AC /* PiecePositionerTests.swift in Sources */,
+				6D7A46AC1C6F6CF0009897AC /* PieceAnimatorTests.swift in Sources */,
+				6D7A46AE1C6F6CF0009897AC /* PiecesCreatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D7A46A01C6F6B7B009897AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D7A46711C6F6B10009897AC /* ADPuzzleAnimation */;
+			targetProxy = 6D7A469F1C6F6B7B009897AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6D7A46781C6F6B10009897AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6D7A46791C6F6B10009897AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6D7A467B1C6F6B10009897AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ADPuzzleAnimation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.antondomashnev.ADPuzzleAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6D7A467C1C6F6B10009897AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ADPuzzleAnimation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.antondomashnev.ADPuzzleAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6D7A46A21C6F6B7B009897AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63D6E1FC2451449A3AECF88A /* Pods-ADPuzzleAnimationTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = ADPuzzleAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.antondomashnev.ADPuzzleAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6D7A46A31C6F6B7B009897AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DD23AA5F96AAC2FB380B860 /* Pods-ADPuzzleAnimationTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = ADPuzzleAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.antondomashnev.ADPuzzleAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D7A466C1C6F6B10009897AC /* Build configuration list for PBXProject "ADPuzzleAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D7A46781C6F6B10009897AC /* Debug */,
+				6D7A46791C6F6B10009897AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D7A467A1C6F6B10009897AC /* Build configuration list for PBXNativeTarget "ADPuzzleAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D7A467B1C6F6B10009897AC /* Debug */,
+				6D7A467C1C6F6B10009897AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D7A46A11C6F6B7B009897AC /* Build configuration list for PBXNativeTarget "ADPuzzleAnimationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D7A46A21C6F6B7B009897AC /* Debug */,
+				6D7A46A31C6F6B7B009897AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D7A46691C6F6B10009897AC /* Project object */;
+}
