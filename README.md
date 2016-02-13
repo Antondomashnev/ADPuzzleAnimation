@@ -76,6 +76,8 @@ For the complete example check the viewController.swift
 
 ### CocoaPods
 
+To integrate ADPuzzleAnimation into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
