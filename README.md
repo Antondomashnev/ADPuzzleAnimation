@@ -1,4 +1,4 @@
-# Meet ADPuzzleAnimation
+# ADPuzzleAnimation
 
 ![](https://travis-ci.org/Antondomashnev/ADPuzzleAnimation.svg?branch=master)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PuzzleAnimation.svg)](https://img.shields.io/cocoapods/v/PuzzleAnimation.svg)
@@ -83,3 +83,12 @@ use_frameworks!
 
 pod 'PuzzleAnimation', '~> 1.0.0'
 ```
+### Carthage
+
+To integrate ADPuzzleAnimation into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "Antondomashnev/ADPuzzleAnimation" ~> 1.0.0
+```
+
+Run `carthage update` to build the framework and drag the built `ADPuzzleAnimation.framework` into your Xcode project.
