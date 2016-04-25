@@ -15,7 +15,7 @@ To create your first animation you need to know only about one method:
 
 ```swift
 /**
- Desiganted initalizer for puzzle animation and it's subclasses
+ Designated initializer for puzzle animation and it's subclasses
  
  - parameter viewToAnimate: view to render into pieces
  - parameter configuration: animation configuration
