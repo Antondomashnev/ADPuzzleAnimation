@@ -3,6 +3,7 @@
 ![](https://travis-ci.org/Antondomashnev/ADPuzzleAnimation.svg?branch=master)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PuzzleAnimation.svg)](https://img.shields.io/cocoapods/v/PuzzleAnimation.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![codebeat badge](https://codebeat.co/badges/3b267dd9-2ac9-4264-8415-2f4c22e88f9a)](https://codebeat.co/projects/github-com-antondomashnev-adpuzzleanimation)
 
 ## Whats inside
 Custom animation for UIView inspired by Fabric - Answers animation.
