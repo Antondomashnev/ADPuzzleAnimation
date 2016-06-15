@@ -83,7 +83,7 @@ class PieceForwardAnimator: AbstractPieceAnimator, PieceAnimator {
                 indexInCurrentGroup = 0
             }
             else {
-                indexInCurrentGroup++
+                indexInCurrentGroup += 1
             }
             self.runningAnimationsCount = self.runningAnimationsCount + 1
         }
@@ -131,7 +131,7 @@ class PieceBackwardAnimator: AbstractPieceAnimator, PieceAnimator {
                 indexInCurrentGroup = 0
             }
             else {
-                indexInCurrentGroup++
+                indexInCurrentGroup += 1
             }
             self.runningAnimationsCount = self.runningAnimationsCount + 1
         }
