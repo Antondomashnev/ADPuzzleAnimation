@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41D1EFF3A74201CA0B737DEB /* Pods_ADPuzzleAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5136307D2BEC18DDEA3111ED /* Pods_ADPuzzleAnimationTests.framework */; };
 		6D7A46761C6F6B10009897AC /* ADPuzzleAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D7A46751C6F6B10009897AC /* ADPuzzleAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D7A468B1C6F6B4C009897AC /* ArrayRemoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46801C6F6B4C009897AC /* ArrayRemoveObject.swift */; };
 		6D7A468C1C6F6B4C009897AC /* CollectionShuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46811C6F6B4C009897AC /* CollectionShuffle.swift */; };
@@ -26,7 +27,7 @@
 		6D7A46AF1C6F6CF0009897AC /* PieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46A91C6F6CF0009897AC /* PieceTests.swift */; };
 		6D7A46B01C6F6CF0009897AC /* PuzzleAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A46AA1C6F6CF0009897AC /* PuzzleAnimationTests.swift */; };
 		6D7A46BC1C6F6D2A009897AC /* MediaForTests.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D7A46BB1C6F6D2A009897AC /* MediaForTests.xcassets */; };
-		C197D93A22C29D6D6B527DCE /* Pods_ADPuzzleAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52FC76265CF9589F842BC29 /* Pods_ADPuzzleAnimationTests.framework */; };
+		A4F73940527E697545EC8754 /* Pods_ADPuzzleAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DD256D4BD260F4B300D316 /* Pods_ADPuzzleAnimation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3DD23AA5F96AAC2FB380B860 /* Pods-ADPuzzleAnimationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADPuzzleAnimationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADPuzzleAnimationTests/Pods-ADPuzzleAnimationTests.release.xcconfig"; sourceTree = "<group>"; };
-		63D6E1FC2451449A3AECF88A /* Pods-ADPuzzleAnimationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADPuzzleAnimationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADPuzzleAnimationTests/Pods-ADPuzzleAnimationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		288D3768FB8C62229B4184BF /* Pods-ADPuzzleAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADPuzzleAnimation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADPuzzleAnimation/Pods-ADPuzzleAnimation.debug.xcconfig"; sourceTree = "<group>"; };
+		5136307D2BEC18DDEA3111ED /* Pods_ADPuzzleAnimationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADPuzzleAnimationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7A46721C6F6B10009897AC /* ADPuzzleAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ADPuzzleAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7A46751C6F6B10009897AC /* ADPuzzleAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADPuzzleAnimation.h; sourceTree = "<group>"; };
 		6D7A46771C6F6B10009897AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,7 +65,10 @@
 		6D7A46A91C6F6CF0009897AC /* PieceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceTests.swift; sourceTree = "<group>"; };
 		6D7A46AA1C6F6CF0009897AC /* PuzzleAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleAnimationTests.swift; sourceTree = "<group>"; };
 		6D7A46BB1C6F6D2A009897AC /* MediaForTests.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MediaForTests.xcassets; sourceTree = "<group>"; };
-		C52FC76265CF9589F842BC29 /* Pods_ADPuzzleAnimationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADPuzzleAnimationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C9BBC12DD8A6B20335E5E4C /* Pods-ADPuzzleAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADPuzzleAnimation.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADPuzzleAnimation/Pods-ADPuzzleAnimation.release.xcconfig"; sourceTree = "<group>"; };
+		9F78F05766A9EFEC475A1DB7 /* Pods-ADPuzzleAnimationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADPuzzleAnimationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADPuzzleAnimationTests/Pods-ADPuzzleAnimationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9DD256D4BD260F4B300D316 /* Pods_ADPuzzleAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADPuzzleAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8723E82F6B33A3A95E649F8 /* Pods-ADPuzzleAnimationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADPuzzleAnimationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADPuzzleAnimationTests/Pods-ADPuzzleAnimationTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F73940527E697545EC8754 /* Pods_ADPuzzleAnimation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,18 +85,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D7A469E1C6F6B7B009897AC /* ADPuzzleAnimation.framework in Frameworks */,
-				C197D93A22C29D6D6B527DCE /* Pods_ADPuzzleAnimationTests.framework in Frameworks */,
+				41D1EFF3A74201CA0B737DEB /* Pods_ADPuzzleAnimationTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E6A3425979A6DAD3F110C3F /* Pods */ = {
+		302DFC3CDDE8F3231BBF0612 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				63D6E1FC2451449A3AECF88A /* Pods-ADPuzzleAnimationTests.debug.xcconfig */,
-				3DD23AA5F96AAC2FB380B860 /* Pods-ADPuzzleAnimationTests.release.xcconfig */,
+				D9DD256D4BD260F4B300D316 /* Pods_ADPuzzleAnimation.framework */,
+				5136307D2BEC18DDEA3111ED /* Pods_ADPuzzleAnimationTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5594B00004BA67A498CF8F27 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				288D3768FB8C62229B4184BF /* Pods-ADPuzzleAnimation.debug.xcconfig */,
+				9C9BBC12DD8A6B20335E5E4C /* Pods-ADPuzzleAnimation.release.xcconfig */,
+				9F78F05766A9EFEC475A1DB7 /* Pods-ADPuzzleAnimationTests.debug.xcconfig */,
+				F8723E82F6B33A3A95E649F8 /* Pods-ADPuzzleAnimationTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -103,8 +119,8 @@
 				6D7A46741C6F6B10009897AC /* ADPuzzleAnimation */,
 				6D7A469A1C6F6B7B009897AC /* ADPuzzleAnimationTests */,
 				6D7A46731C6F6B10009897AC /* Products */,
-				3E6A3425979A6DAD3F110C3F /* Pods */,
-				9C5F106CBF14A15444B56CCC /* Frameworks */,
+				5594B00004BA67A498CF8F27 /* Pods */,
+				302DFC3CDDE8F3231BBF0612 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,14 +198,6 @@
 			path = ADPuzzleAnimationTests;
 			sourceTree = "<group>";
 		};
-		9C5F106CBF14A15444B56CCC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C52FC76265CF9589F842BC29 /* Pods_ADPuzzleAnimationTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -208,10 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D7A467A1C6F6B10009897AC /* Build configuration list for PBXNativeTarget "ADPuzzleAnimation" */;
 			buildPhases = (
+				B8C3CD2E03C03A548275A8DA /* [CP] Check Pods Manifest.lock */,
 				6D7A466D1C6F6B10009897AC /* Sources */,
 				6D7A466E1C6F6B10009897AC /* Frameworks */,
 				6D7A466F1C6F6B10009897AC /* Headers */,
 				6D7A46701C6F6B10009897AC /* Resources */,
+				89A90586B7F420658C839C64 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,12 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D7A46A11C6F6B7B009897AC /* Build configuration list for PBXNativeTarget "ADPuzzleAnimationTests" */;
 			buildPhases = (
-				EE449C31F63AF981B9AB24CF /* Check Pods Manifest.lock */,
+				3D2D586B7D83322CFA5D5435 /* [CP] Check Pods Manifest.lock */,
 				6D7A46951C6F6B7B009897AC /* Sources */,
 				6D7A46961C6F6B7B009897AC /* Frameworks */,
 				6D7A46971C6F6B7B009897AC /* Resources */,
-				BC848FD776B7AE8C2CDFA1E8 /* Embed Pods Frameworks */,
-				C74067DDF3E15754B8940160 /* Copy Pods Resources */,
+				7CF8A298228A8E1C9A4F1785 /* [CP] Embed Pods Frameworks */,
+				FF7A4754B4EF11624F9ABAFA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,14 +308,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BC848FD776B7AE8C2CDFA1E8 /* Embed Pods Frameworks */ = {
+		3D2D586B7D83322CFA5D5435 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7CF8A298228A8E1C9A4F1785 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,34 +338,49 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADPuzzleAnimationTests/Pods-ADPuzzleAnimationTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C74067DDF3E15754B8940160 /* Copy Pods Resources */ = {
+		89A90586B7F420658C839C64 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADPuzzleAnimationTests/Pods-ADPuzzleAnimationTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADPuzzleAnimation/Pods-ADPuzzleAnimation-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EE449C31F63AF981B9AB24CF /* Check Pods Manifest.lock */ = {
+		B8C3CD2E03C03A548275A8DA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FF7A4754B4EF11624F9ABAFA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADPuzzleAnimationTests/Pods-ADPuzzleAnimationTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -478,6 +518,7 @@
 		};
 		6D7A467B1C6F6B10009897AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 288D3768FB8C62229B4184BF /* Pods-ADPuzzleAnimation.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -495,6 +536,7 @@
 		};
 		6D7A467C1C6F6B10009897AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C9BBC12DD8A6B20335E5E4C /* Pods-ADPuzzleAnimation.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -512,7 +554,7 @@
 		};
 		6D7A46A21C6F6B7B009897AC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63D6E1FC2451449A3AECF88A /* Pods-ADPuzzleAnimationTests.debug.xcconfig */;
+			baseConfigurationReference = 9F78F05766A9EFEC475A1DB7 /* Pods-ADPuzzleAnimationTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ADPuzzleAnimationTests/Info.plist;
@@ -526,7 +568,7 @@
 		};
 		6D7A46A31C6F6B7B009897AC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DD23AA5F96AAC2FB380B860 /* Pods-ADPuzzleAnimationTests.release.xcconfig */;
+			baseConfigurationReference = F8723E82F6B33A3A95E649F8 /* Pods-ADPuzzleAnimationTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ADPuzzleAnimationTests/Info.plist;
