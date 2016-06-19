@@ -66,7 +66,7 @@ platform :ios do
   end
 
   private_lane :podspecs_push do
-    pod_push(path: ENV['PODSPEC'], repo: ENV['MASTER_PODS_REPO'], sources: ENV['MASTER_PODS_SOURCE']], allow_warnings: true)
+    pod_push(path: ENV['PODSPEC'], repo: ENV['MASTER_PODS_REPO'], sources: [ENV['MASTER_PODS_SOURCE']], allow_warnings: true)
   end
 
   ######################### CHANGELOG ##########################
