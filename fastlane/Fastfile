@@ -35,7 +35,7 @@ platform :ios do
     git_add_or_update_tag(
       tag_name: tag_name,
       remote: remote,
-      branch: release_branch
+      branch: master_branch
     )
 
     set_or_update_github_release(
@@ -48,8 +48,8 @@ platform :ios do
 
     push_to_git_remote(
       remote: remote,
-      local_branch: release_branch,
-      remote_branch: release_branch
+      local_branch: master_branch,
+      remote_branch: master_branch
     )
 
     podspecs_push
