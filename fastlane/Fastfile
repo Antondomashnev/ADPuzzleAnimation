@@ -1,0 +1,178 @@
+fastlane_version "1.70.0"
+
+default_platform :ios
+
+platform :ios do
+
+  ############################## PRE ##############################
+
+  before_all do
+    update_fastlane
+  end
+
+  ######################### PUBLIC LANES ##########################
+
+  lane :release do |options|
+    master_branch = ENV['GITHUB_RELEASE_BRANCH']
+    remote = ENV['GITHUB_REMOTE']
+
+    ensure_git_branch(
+      branch: master_branch
+    )
+
+    ensure_git_status_clean
+
+    upcoming_version = get_upcoming_version.clone
+    upcoming_notes = get_upcoming_notes.clone
+
+    put_upcoming_to_releases
+
+    podspecs_version_bump(
+      version: upcoming_version
+    )
+
+    tag_name = upcoming_version
+    git_add_or_update_tag(
+      tag_name: tag_name,
+      remote: remote,
+      branch: release_branch
+    )
+
+    set_or_update_github_release(
+      release_name: tag_name,
+      repository_name: ENV['GITHUB_REPOSITORY'],
+      description: upcoming_notes,
+      tag_name: tag_name,
+      api_token: ENV['CONICHI_CI_GITHUB_TOKEN']
+    )
+
+    push_to_git_remote(
+      remote: remote,
+      local_branch: release_branch,
+      remote_branch: release_branch
+    )
+
+    podspecs_push
+  end
+
+  ######################### PRIVATE LANES ##########################
+
+  private_lane :podspecs_version_bump do |options|
+    version = options[:version]
+    version_bump_podspec(path: ENV['PODSPEC'], version_number: version)
+    git_commit_shell(
+      message: "Bump podspecs version to #{version}"
+    )
+  end
+
+  private_lane :podspecs_push do
+    pod_push(path: ENV['PODSPEC'], repo: ENV['MASTER_PODS_REPO'], sources: ENV['MASTER_PODS_SOURCE']], allow_warnings: true)
+  end
+
+  ######################### CHANGELOG ##########################
+
+  private_lane :put_upcoming_to_releases do
+    changelog_data = get_changelog_data
+    upcoming = changelog_data["upcoming"].clone
+    changelog_data["upcoming"]["version"] = nil
+    changelog_data["upcoming"]["notes"] = nil
+    if changelog_data["releases"].count > 0
+      changelog_data["releases"].unshift(upcoming)
+    else
+      changelog_data["releases"].push(upcoming)
+    end
+    save_changelog_data(
+      changelog_data: changelog_data
+    )
+    git_commit_shell(
+      message: "Move upcoming version to releases in CHANGELOG"
+    )
+  end
+
+  private_lane :get_changelog_data do
+    changelog_data = YAML.load(File.open "../CHANGELOG.yml")
+    changelog_data
+  end
+
+  private_lane :get_upcoming_version do
+    upcoming = get_upcoming
+    upcoming_version = upcoming["version"]
+    upcoming_version
+  end
+
+  private_lane :get_upcoming_notes do
+    upcoming = get_upcoming
+    upcoming_notes =  "* #{upcoming["notes"].join "\n* "} \n\n"
+    upcoming_notes
+  end
+
+  ######################### CHANGELOG ##########################
+
+  private_lane :git_add_or_update_tag do |options|
+    tag_name = options[:tag_name]
+    remote = options[:remote]
+    branch = options[:branch]
+
+    branch_exist = git_branch_exists_on_remote(
+      remote: remote,
+      branch: branch
+    )
+
+    if branch_exist.to_i != 0
+      sh("git pull #{remote} #{branch} --tags")
+    end
+
+    last_tag_name = last_git_tag
+    if last_tag_name == tag_name
+      sh("git tag #{tag_name} -d")
+      sh("git push #{remote} :refs/tags/#{tag_name}")
+    end
+
+    sh("git tag #{tag_name}")
+    sh("git push #{remote} --tags")
+  end
+
+  private_lane :git_branch_exists_on_remote do |options|
+    remote = options[:remote]
+    branch = options[:branch]
+    branch_exist = sh("git ls-remote --heads #{remote} #{branch} | wc -l")
+    branch_exist
+  end
+
+  private_lane :set_or_update_github_release do |options|
+    release_name = options[:release_name]
+    description = options[:description]
+    repository_name = options[:repository_name]
+    tag_name = options[:tag_name]
+    api_token = options[:api_token]
+
+    release = get_github_release(
+      url: repository_name,
+      version: release_name,
+      api_token: api_token
+    )
+
+    puts "#{release}"
+
+    if release != nil
+      release_id = release['id'].to_s
+      edit_github_release(
+        repository_name: repository_name,
+        id: release_id,
+        description: description,
+        tag_name: tag_name,
+        name: release_name,
+        api_token: api_token
+      )
+    else
+      set_github_release(
+        repository_name: repository_name,
+        api_token: api_token,
+        name: release_name,
+        tag_name: tag_name,
+        description: description
+      )
+    end
+  end
+
+end
