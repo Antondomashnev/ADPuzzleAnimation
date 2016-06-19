@@ -94,7 +94,12 @@ platform :ios do
     changelog_data
   end
 
-  lane :get_upcoming do
+  private_lane :save_changelog_data do |options|
+    changelog_data = options[:changelog_data]
+    File.open("../CHANGELOG.yml", 'w') { |f| YAML.dump(changelog_data, f) }
+  end
+
+  private_lane :get_upcoming do
     changelog_data = get_changelog_data
     upcoming = changelog_data["upcoming"]
     upcoming
