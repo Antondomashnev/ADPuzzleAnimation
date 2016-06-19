@@ -13,7 +13,7 @@ platform :ios do
   ######################### PUBLIC LANES ##########################
 
   lane :release do |options|
-    master_branch = ENV['GITHUB_RELEASE_BRANCH']
+    master_branch = ENV['GITHUB_MASTER_BRANCH']
     remote = ENV['GITHUB_REMOTE']
 
     ensure_git_branch(
@@ -43,7 +43,7 @@ platform :ios do
       repository_name: ENV['GITHUB_REPOSITORY'],
       description: upcoming_notes,
       tag_name: tag_name,
-      api_token: ENV['CONICHI_CI_GITHUB_TOKEN']
+      api_token: ENV['PERSONAL_GITHUB_TOKEN']
     )
 
     push_to_git_remote(
