@@ -186,4 +186,9 @@ platform :ios do
     end
   end
 
+  private_lane :git_commit_shell do |options|
+    message = options[:message]
+    sh("git commit -am '#{message}'")
+  end
+
 end
