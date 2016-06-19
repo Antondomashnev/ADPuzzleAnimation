@@ -22,8 +22,8 @@ platform :ios do
 
     ensure_git_status_clean
 
-    upcoming_version = get_upcoming_version.clone
-    upcoming_notes = get_upcoming_notes.clone
+    upcoming_version = get_upcoming_version
+    upcoming_notes = get_upcoming_notes
 
     put_upcoming_to_releases
 
@@ -92,6 +92,12 @@ platform :ios do
   private_lane :get_changelog_data do
     changelog_data = YAML.load(File.open "../CHANGELOG.yml")
     changelog_data
+  end
+
+  lane :get_upcoming do
+    changelog_data = get_changelog_data
+    upcoming = changelog_data["upcoming"]
+    upcoming
   end
 
   private_lane :get_upcoming_version do
