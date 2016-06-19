@@ -1,10 +1,12 @@
 ---
 upcoming:
-  version: 1.1.1
+  version: 
+  notes: 
+releases:
+- version: 1.1.1
   notes:
   - Fix swift 2.2 warnings
   - Add fastlane
-releases:
 - version: 1.1.0
   notes:
   - Now available as a dynamic framework
